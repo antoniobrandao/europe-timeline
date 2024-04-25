@@ -1,0 +1,68 @@
+
+  // Eric Hoffer (1902-1983)
+  // Frank P. Ramsey (1903–1930). Proposed redundancy theory of truth.
+  // Theodor Adorno (1903–1969). Frankfurt School.
+  // Joseph Campbell (1904-1987) comparative mythology and comparative religion
+  // Raymond Aron (1905 – 1983).
+  // Ayn Rand (1905–1982). Objectivist, Individualist.
+  // Kurt Gödel (1906–1978). Vienna Circle.
+  // Emmanuel Levinas (1906–1995).
+  // H.L.A. Hart (1907–1992). Legal positivism.
+  // Maurice Merleau-Ponty (1908–1961). Influential French phenomenologist.
+  // Willard van Orman Quine (1908–2000).
+  // Isaiah Berlin (1909–1997), historian of ideas.
+  // Simone Weil (1909–1943).
+  // A.J. Ayer (1910–1989). Logical positivist, emotivist.
+  // J.L. Austin (1911–1960).
+  // Marshall McLuhan (1911–1980). Media theory.
+  // Alan Turing (1912–1954). Functionalist in philosophy of mind.
+  // Wilfrid Sellars (1912–1989). Influential American philosopher
+  // Paul Ricœur (1913–2005). French philosopher and theologian.
+  // Roland Barthes (1915–1980). French semiotician and literary theorist.
+  // Donald Davidson (1917–2003). Coherentist philosophy of mind.
+  // Louis Althusser (1918–1990). Structural Marxist.
+  // Russell Kirk (1918 – 1994).
+  // Aleksandr Solzhenitsyn (1918 – 2008).
+  // M. Bunge (1919–2020).
+  // P. F. Strawson (1919–2006). Ordinary language philosophy.
+  // John Rawls (1921–2002). Liberal.
+  // Thomas Kuhn (1922–1996). Author of The Structure of Scientific Revolutions.
+  // Zygmunt Bauman (1925–2017). Polish sociologist and philosopher, who introduced the idea of liquid modernity.
+  // Frantz Fanon (1925–1961). Postcolonialism
+  // Gilles Deleuze (1925–1995). Post-structuralism
+  // Michel Foucault (1926–1984). Structuralism, Post-structuralism, Postmodernism, and the concept of biopolitics.
+  // Hilary Putnam (1926–2016). Neopragmatism.
+  // Noam Chomsky (born 1928). Linguist.
+  // Robert M. Pirsig (1928–2017). Introduced the Methaphysics of Quality. MOQ incorporates facets of East Asian philosophy, pragmatism and the work of F. S. C. Northrop.
+  // Bernard Williams (1929–2003). Moral philosopher.
+  // Jean Baudrillard (1929–2007). Postmodernism, Post-structuralism.
+  // Jürgen Habermas (born 1929). Discourse ethics.
+  // Jaakko Hintikka (1929–2015).
+  // Alasdair MacIntyre (born 1929). Aristotelian.
+  // Hubert Lederer Dreyfus (1929-2017)
+  // Allan Bloom (1930–1992). Political Philosopher.
+  // Pierre Bourdieu (1930–2002). French psychoanalytic sociologist and philosopher.
+  // Jacques Derrida (1930–2004). Deconstruction.
+  // Thomas Sowell (born 1930). Political Philosopher, capitalist.
+  // Guy Debord (1931–1994). French Marxist philosopher.
+  // Richard Rorty (1931–2007). Pragmatism, Postanalytic philosophy.
+  // Charles Taylor (born 1931). Political philosophy, Philosophy of Social Science, and Intellectual History
+  // John Searle (born 1932). Direct realism.
+  // Alvin Plantinga (born 1932). Reformed epistemology, Philosophy of Religion.
+  // Jerry Fodor (1935–2017).
+  // Thomas Nagel (born 1937). Qualia theory.
+  // Alain Badiou (born 1937).
+  // Robert Nozick (1938–2002). Libertarian.
+  // Tom Regan (1938–2017). Animal rights philosopher.
+  // Saul Kripke (1940-2022). Modal semantics.
+  // Jean-Luc Nancy (1940-2021) French philosopher.
+  // David K. Lewis (1941–2001). Modal realism.
+  // Derek Parfit (1942–2017).
+  // Giorgio Agamben (born 1942). state of exception, form–of–life, and homo sacer.
+  // Gayatri Chakravorty Spivak (born 1942). Postcolonialism, Feminism, Literary theory.
+  // Roger Scruton (1944-2020). Traditionalist conservatism.
+  // Peter Singer (born 1946) Moral philosopher on animal liberation, effective altruism.
+  // Camille Paglia (born 1947).
+  // Martha Nussbaum (born 1947). Political philosopher.
+  // Hans-Hermann Hoppe (born 1949).
+  // Ken Wilber (born 1949). Integral Theory.
