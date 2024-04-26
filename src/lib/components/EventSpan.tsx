@@ -2,8 +2,8 @@
 
 import React from 'react'
 import clsx from 'clsx'
-import { notableEvents } from '@/lib/data/events'
-import { years } from '@/lib/data/time'
+import { notableSpanEvents, EventSpanType } from '@/lib/data/events'
+import { years, getYearPercentualPosition } from '@/lib/data/time'
 
 type EventSpanProps = {
   name: string
@@ -12,24 +12,25 @@ type EventSpanProps = {
 
 const EventSpan = (props: EventSpanProps) => {
   const { name, bgColorClass } = props
-  const eventData = notableEvents.find(event => event.name === name)
+  // @ts-ignore
+  const eventData: EventSpanType = notableSpanEvents.find(
+    (event: EventSpanType) => event.name === name,
+  )
 
-  const barsJsx = years.map((year: number, index: number) => {
-    const eventActive =
-      // @ts-ignore
-      eventData.start <= year && eventData.end >= year
-      // console.log('eventActive', eventActive)
-    const barBaseStyle = 'w-[1px] !h-[20px] overflow-hidden'
-    const barInactiveStyle = 'bg-white/10 hover:bg-white/40'
-    const barActiveStyle = bgColorClass
-    const barStyle = clsx(
-      barBaseStyle,
-      eventActive ? barActiveStyle : barInactiveStyle,
-    )
-    return <div key={index} className={barStyle} />
-  })
+  const startPercent = getYearPercentualPosition(eventData.start)
+  const endPercent = getYearPercentualPosition(eventData.end)
 
-  return <div className="flex w-full border h-[40px]">{barsJsx}</div>
+  return (
+    <div className="flex h-[18px] relative bg-white/10 w-full">
+      <div
+        className={clsx('h-[18px] absolute top-0', bgColorClass)}
+        style={{ left: `${startPercent}%`, width: `${endPercent - startPercent}%` }}
+      ></div>
+      <p className="text-xs pl-2 select-none absolute leading-none top-[2px]" style={{ left: `${startPercent}%` }}>
+        {name}
+      </p>
+    </div>
+  )
 }
 
 export default EventSpan

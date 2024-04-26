@@ -1,10 +1,17 @@
-export type EventType = {
+export type EventSpanType = {
   name: string
   start: number
-  end: number | null
+  end: number
+  link?: string
 }
 
-export const notableEvents: EventType[] = [
+export type EventYearType = {
+  name: string
+  year: number
+  link?: string
+}
+
+export const notableSpanEvents: EventSpanType[] = [
   {
     name: 'Christian Domination',
     start: 400,
@@ -12,7 +19,7 @@ export const notableEvents: EventType[] = [
   },
   {
     name: 'Islamic Golden Age',
-    start: 740,
+    start: 700,
     end: 1250,
   },
   {
@@ -33,12 +40,7 @@ export const notableEvents: EventType[] = [
   {
     name: '12th Century Renaissance',
     start: 1100,
-    end: 1200,
-  },
-  {
-    name: 'Sack of Constantinople',
-    start: 1453,
-    end: null,
+    end: 1250,
   },
   {
     name: 'Italian Renaissance',
@@ -46,39 +48,53 @@ export const notableEvents: EventType[] = [
     end: 1700,
   },
   {
-    name: 'Protestant Reformation',
-    start: 1517,
-    end: null,
-  },
-  {
-    name: 'The Emperor Justinian orders the closure of the Neoplatonic academy.',
-    start: 529,
-    end: null,
-  },
-  {
-    name: 'Paganism banned.',
-    start: 313,
-    end: null,
-  },
-  {
     name: 'Dark Ages',
     start: 550,
     end: 1120,
   },
+]
+
+
+
+
+
+export const notableYearEvents: EventYearType[] = [
   {
-    name: 'Altar of Victory removed.',
-    start: 382,
-    end: null,
+    name: 'Roman Empire adopts Christianity',
+    year: 300,
   },
   {
-    name: 'Christianity made the official religion.',
-    start: 1517,
-    end: null,
+    name: 'Christianity appears',
+    year: 100,
   },
   {
-    name: 'Christianity bans the Olympic games.',
-    start: 1517,
-    end: null,
+    name: 'Sack of Constantinople',
+    year: 1453,
+  },
+  {
+    name: 'Protestant Reformation',
+    year: 1517,
+  },
+  {
+    name: 'Justinian closes the Academy of Athens',
+    year: 529,
+  },
+  {
+    name: 'Paganism banned',
+    year: 313,
+  },
+  {
+    name: 'Altar of Victory removed',
+    year: 382,
+  },
+  {
+    name: 'Christianity made the official religion of the Empire',
+    year: 380,
+  },
+  {
+    name: 'Christianity bans the Olympic games',
+    year: 393,
+    link: 'https://taylormarshall.com/2012/08/how-catholic-emperor-banned-olympic.html'
   },
 //   {
 //     name: 'Humanism',

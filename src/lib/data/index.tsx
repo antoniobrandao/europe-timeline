@@ -1892,7 +1892,7 @@ export const westernPhilosophers: PhilosopherType[] = [
     jewish: false,
     period: 'Middle Ages',
     region: Region.EUROPE,
-    fields: [Fields.MIND, Fields.THEOLOGY],
+    fields: [Fields.MIND, Fields.THEOLOGY, Fields.METAPHYSICS, Fields.POLITICS],
     wikipediaUrl: 'https://en.wikipedia.org/wiki/Thomas_Aquinas',
   },
   {

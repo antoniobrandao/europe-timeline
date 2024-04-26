@@ -25,7 +25,7 @@ const AmountSpan = (props: AmountSpanProps) => {
     arrayToUse = arrayToUse.filter(person => person.fields.indexOf(filterField) > -1)
   }
 
-  const barStyle = 'w-[1px] bg-white/10 h-[100px] relative hover:bg-white/40'
+  const barStyle = 'w-[1px] bg-white/5 h-[100px] relative hover:bg-white/40'
   const barInnerStyle = clsx(bgColorClass || 'bg-white', 'w-[1px] absolute bottom-0 left-0')
 
   const barsJsx = years.map(year => {
