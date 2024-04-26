@@ -1,12 +1,12 @@
-type EventType = {
+export type EventType = {
   name: string
   start: number
   end: number | null
 }
 
-export const importantEvents: EventType[] = [
+export const notableEvents: EventType[] = [
   {
-    name: 'Chrisitian Domination',
+    name: 'Christian Domination',
     start: 400,
     end: 1700,
   },
@@ -59,6 +59,11 @@ export const importantEvents: EventType[] = [
     name: 'Paganism banned.',
     start: 313,
     end: null,
+  },
+  {
+    name: 'Dark Ages',
+    start: 550,
+    end: 1120,
   },
   {
     name: 'Altar of Victory removed.',

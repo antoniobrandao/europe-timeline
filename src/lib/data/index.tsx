@@ -20,7 +20,7 @@ export enum Gender {
   FEMALE = 'FEMALE',
 }
 
-export type PhilospherType = {
+export type PhilosopherType = {
   name: string,
   gender: Gender,
   birth: number
@@ -36,7 +36,7 @@ export type PhilospherType = {
   wikipediaUrl: string
 }
 
-export const westernPhilosophers: PhilospherType[] = [
+export const westernPhilosophers: PhilosopherType[] = [
   {
     name: 'Thales of Miletus',
     gender: Gender.MALE,
@@ -2526,21 +2526,6 @@ export const westernPhilosophers: PhilospherType[] = [
     region: Region.EUROPE,
     fields: [Fields.POLITICS],
     wikipediaUrl: 'https://en.wikipedia.org/wiki/Jean-Jacques_Rousseau',
-  },
-  {
-    name: 'Immanuel Kant',
-    gender: Gender.MALE,
-    birth: 1724,
-    death: 1804,
-    description: 'Philosopher, often considered the central figure of modern philosophy.',
-    polytheist: false,
-    christian: true,
-    muslim: false,
-    jewish: false,
-    period: 'Modern Era',
-    region: Region.EUROPE,
-    fields: [Fields.MIND],
-    wikipediaUrl: 'https://en.wikipedia.org/wiki/Immanuel_Kant',
   },
   {
     name: 'Denis Diderot',
