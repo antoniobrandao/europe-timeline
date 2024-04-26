@@ -146,77 +146,77 @@ const warsList = [
   { start: -32, end: -30, name: 'Final War of the Roman Republic' },
   { start: -29, end: -19, name: 'Cantabrian Wars' },
   { start: -12, end: 16, name: 'Early Germanic campaigns' },
-
-6–9 Bellum Batonianum
-21 Revolt of Sacrovir
-49–96 Roman conquest of Britain
-51 Armenian–Iberian war
-60–61 Boudica's uprising
-69 Year of the Four Emperors
-69–70 Revolt of the Batavi
-86–88 Domitian's Dacian War
-101–106 Trajan's Dacian Wars
-166–180 Marcomannic Wars
-193 Year of the Five Emperors
-208–210 Roman invasion of Caledonia
-235–284 Crisis of the Third Century
-238 Year of the Six Emperors
-267–269 Gothic War (267–269)
-274 Battle of Châlons
-284–285 Roman civil war
-306–324 Civil wars of the Tetrarchy
-350–353 Roman civil war
-356–378 Roman-Alamanni War
-360–361 Roman civil war
-367–368 Great Conspiracy
-367–369 Gothic War (367–369)
-376–382 Gothic War (376–382)
-387–388 Roman civil war
-394 Roman civil war (394)
-395-398 Gothic revolt of Alaric I
-398 Stilicho's Pictish War
-401–403 Gothic War (401–403)
-405–406 War of Radagaisus
-409–411 Gerontian Revolt
-411–413 Revolt of Jovinus
-412-413 War of Heraclianus
-409–418 Gothic War (409–418)
-409–417: Bagaudae uprising in the Loire valley and Brittany
-416–418 Gothic War in Spain (416-418)
-420 Battle of the Nervasos Mountains
-422 Battle of Tarraco
-424–425 Roman civil war (Joannes vs Galla Placidia)
-425–426: Gothic revolt of Theodoric I
-428: Frankish War (428)
-432 Roman civil war of 432
-435-436: Burgundian Revolt of Gunther - Flavius Aetius defects the Burgundians.
-435–437: Bagaudae uprising under Tibatto in Gaul suppressed by Flavius Aetius.
-436-439: Gothic War (436-439)
-436–437 Hunnic-Burgundian War
-455 Vandalic Sack of Rome
-458 Gothic War (458)
-461–476 Gothic War (461–476)
-486 Battle of Soissons
-526–532 Iberian War
-535–554 Gothic War (535–554)
-542–562 Lazic War
-582–602 Maurice's Balkan campaigns
-c. 600–793 Frisian–Frankish wars
-650–799 Arab–Khazar wars
-680 Battle of Ongal
-695–717 Twenty Years' Anarchy
-708 Byzantine–Bulgarian battle of Anchialus
-711–718 Umayyad conquest of Hispania
-715–718 Frankish Civil War (715–718)
-717–718 Second Siege of Constantinople
-719–759 Umayyad invasion of Gaul
-735–737 Marwan ibn Muhammad's invasion of Georgia
-759 “Byzantine”-Bulgarian battle of the Rishki Pass
-772–804 Saxon Wars
-792 ”Byzantine”-Bulgarian battle of Marcellae
-c. 800/862–973 Hungarian invasions of Europe
-809 Siege of Serdica (Sofia)
-811 “Byzantine”-Bulgarian battle of Vărbitsa Pass (Battle of Pliska)
-813 “Byzantine”-Bulgarian battle of Versinikia
-830s Paphlagonian expedition of the Rus
 ]
+
+// 6–9 Bellum Batonianum
+// 21 Revolt of Sacrovir
+// 49–96 Roman conquest of Britain
+// 51 Armenian–Iberian war
+// 60–61 Boudica's uprising
+// 69 Year of the Four Emperors
+// 69–70 Revolt of the Batavi
+// 86–88 Domitian's Dacian War
+// 101–106 Trajan's Dacian Wars
+// 166–180 Marcomannic Wars
+// 193 Year of the Five Emperors
+// 208–210 Roman invasion of Caledonia
+// 235–284 Crisis of the Third Century
+// 238 Year of the Six Emperors
+// 267–269 Gothic War (267–269)
+// 274 Battle of Châlons
+// 284–285 Roman civil war
+// 306–324 Civil wars of the Tetrarchy
+// 350–353 Roman civil war
+// 356–378 Roman-Alamanni War
+// 360–361 Roman civil war
+// 367–368 Great Conspiracy
+// 367–369 Gothic War (367–369)
+// 376–382 Gothic War (376–382)
+// 387–388 Roman civil war
+// 394 Roman civil war (394)
+// 395-398 Gothic revolt of Alaric I
+// 398 Stilicho's Pictish War
+// 401–403 Gothic War (401–403)
+// 405–406 War of Radagaisus
+// 409–411 Gerontian Revolt
+// 411–413 Revolt of Jovinus
+// 412-413 War of Heraclianus
+// 409–418 Gothic War (409–418)
+// 409–417: Bagaudae uprising in the Loire valley and Brittany
+// 416–418 Gothic War in Spain (416-418)
+// 420 Battle of the Nervasos Mountains
+// 422 Battle of Tarraco
+// 424–425 Roman civil war (Joannes vs Galla Placidia)
+// 425–426: Gothic revolt of Theodoric I
+// 428: Frankish War (428)
+// 432 Roman civil war of 432
+// 435-436: Burgundian Revolt of Gunther - Flavius Aetius defects the Burgundians.
+// 435–437: Bagaudae uprising under Tibatto in Gaul suppressed by Flavius Aetius.
+// 436-439: Gothic War (436-439)
+// 436–437 Hunnic-Burgundian War
+// 455 Vandalic Sack of Rome
+// 458 Gothic War (458)
+// 461–476 Gothic War (461–476)
+// 486 Battle of Soissons
+// 526–532 Iberian War
+// 535–554 Gothic War (535–554)
+// 542–562 Lazic War
+// 582–602 Maurice's Balkan campaigns
+// c. 600–793 Frisian–Frankish wars
+// 650–799 Arab–Khazar wars
+// 680 Battle of Ongal
+// 695–717 Twenty Years' Anarchy
+// 708 Byzantine–Bulgarian battle of Anchialus
+// 711–718 Umayyad conquest of Hispania
+// 715–718 Frankish Civil War (715–718)
+// 717–718 Second Siege of Constantinople
+// 719–759 Umayyad invasion of Gaul
+// 735–737 Marwan ibn Muhammad's invasion of Georgia
+// 759 “Byzantine”-Bulgarian battle of the Rishki Pass
+// 772–804 Saxon Wars
+// 792 ”Byzantine”-Bulgarian battle of Marcellae
+// c. 800/862–973 Hungarian invasions of Europe
+// 809 Siege of Serdica (Sofia)
+// 811 “Byzantine”-Bulgarian battle of Vărbitsa Pass (Battle of Pliska)
+// 813 “Byzantine”-Bulgarian battle of Versinikia
+// 830s Paphlagonian expedition of the Rus
