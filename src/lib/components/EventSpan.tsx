@@ -21,12 +21,12 @@ const EventSpan = (props: EventSpanProps) => {
   const endPercent = getYearPercentualPosition(eventData.end)
 
   return (
-    <div className="flex h-[18px] relative bg-white/10 w-full">
+    <div className="flex h-[14px] relative bg-white/10 w-full">
       <div
-        className={clsx('h-[18px] absolute top-0', bgColorClass)}
+        className={clsx('h-[14px] absolute top-0', bgColorClass)}
         style={{ left: `${startPercent}%`, width: `${endPercent - startPercent}%` }}
       ></div>
-      <p className="text-xs pl-2 select-none absolute leading-none top-[2px]" style={{ left: `${startPercent}%` }}>
+      <p className="text-[10px] pl-2 select-none absolute leading-none top-[2px] uppercase" style={{ left: `${startPercent}%` }}>
         {name}
       </p>
     </div>

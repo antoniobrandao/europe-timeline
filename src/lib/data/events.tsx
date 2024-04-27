@@ -13,7 +13,7 @@ export type EventYearType = {
 
 export const notableSpanEvents: EventSpanType[] = [
   {
-    name: 'Christian Domination',
+    name: 'Christian Domination of Institutions',
     start: 400,
     end: 1700,
   },
@@ -90,6 +90,10 @@ export const notableYearEvents: EventYearType[] = [
   {
     name: 'Christianity made the official religion of the Empire',
     year: 380,
+  },
+  {
+    name: 'Some Arab guy says the Quran must be taken literally',
+    year: 1000,
   },
   {
     name: 'Christianity bans the Olympic games',

@@ -4,8 +4,8 @@ import React from 'react'
 import DataContext from '@/lib/context/DataContext'
 
 const MainDisplay = () => {
-  const { mainStatusDisplay } = React.useContext(DataContext)
+  const { year } = React.useContext(DataContext)
 
-  return <p className="text-white">Year: {mainStatusDisplay}</p>
+  return <p className="text-white">Year: {year}</p>
 }
 export default MainDisplay

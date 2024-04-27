@@ -19,13 +19,13 @@ const EventYear = (props: EventYearProps) => {
   const startPercent = getYearPercentualPosition(eventData.year)
 
   return (
-    <div className="flex h-[18px] relative bg-white/10 w-full">
+    <div className="flex h-[14px] relative bg-white/10 w-full">
       <div
-        className={'bg-white w-[2px] h-[18px] absolute top-0'}
+        className={'bg-white w-[2px] h-[14px] absolute top-0'}
         style={{ left: `${startPercent}%` }}
       ></div>
       <p
-        className="text-xs pl-2 select-none absolute leading-none top-[2px]"
+        className="text-[10px] uppercase pl-2 select-none absolute leading-none top-[2px]"
         style={{ left: `calc(${startPercent }% + 2px)` }}
       >
         {name}

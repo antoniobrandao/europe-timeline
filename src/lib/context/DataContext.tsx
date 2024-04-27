@@ -7,6 +7,8 @@ import { PhilosopherType } from '@/lib/data'
 // import defaultDocument from '@/lib/constants/default_document'
 
 const defaultValue = {
+  year: 0,
+  setYear: (newYear: number) => {},
   westernPhilosophers: westernPhilosophers,
   mainStatusDisplay: '',
   setMainStatusDisplay: (newString: string) => {},

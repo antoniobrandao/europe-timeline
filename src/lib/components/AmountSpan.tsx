@@ -37,10 +37,10 @@ const AmountSpan = (props: AmountSpanProps) => {
       <div
         key={nanoid() + `${year} (${peopleNumber})`}
         className={barStyle}
-        onMouseOver={() => {
-          setMainStatusDisplay(`${year} (${peopleNumber})`)
-          setPhilosophersToDisplay(people)
-        }}
+        // onMouseOver={() => {
+        //   setMainStatusDisplay(`${year} (${peopleNumber})`)
+        //   setPhilosophersToDisplay(people)
+        // }}
       >
         <div className={barInnerStyle} style={{ height: `${peopleNumber * 2}px` }}></div>
       </div>
