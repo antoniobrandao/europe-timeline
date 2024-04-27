@@ -3,7 +3,8 @@
 import React, { useEffect, useState, useRef } from 'react'
 import DataContext from '@/lib/context/DataContext'
 import { years, totalYears } from '@/lib/data/time'
-import { Fields, Region, DisplayContentType } from '@/lib/data'
+import { Fields, Region } from '@/lib/constants/enums'
+import { DisplayContentType } from '@/lib/constants/types'
 import clsx from 'clsx'
 
 type AmountSpanCanvasProps = {
@@ -34,7 +35,6 @@ const AmountSpanCanvas = (props: AmountSpanCanvasProps) => {
   useEffect(() => {
     if (canvasRef.current) {
       const ctx = canvasRef.current.getContext('2d')
-      //   ctx?.strokeRect(200, 200, 40, 50)
       // @ts-ignore
       if (ctx) {
         years.forEach(function (year, i) {
@@ -65,10 +65,7 @@ const AmountSpanCanvas = (props: AmountSpanCanvasProps) => {
   )
 
   return (
-    <div
-      className={rootStyle}
-      onMouseOver={() => setDisplayContent(displayContentFormat)}
-    >
+    <div className={rootStyle} onMouseOver={() => setDisplayContent(displayContentFormat)}>
       <p className="absolute top-1 left-1 text-white text-xs">{title}</p>
       <canvas
         ref={canvasRef}

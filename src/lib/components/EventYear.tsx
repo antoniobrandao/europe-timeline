@@ -1,8 +1,8 @@
 'use client'
 
 import React from 'react'
-import { notableYearEvents, EventYearType } from '@/lib/data/events'
-import { DisplayContentType } from '@/lib/data'
+import { notableYearEvents } from '@/lib/data/events'
+import { DisplayContentType, EventYearType } from '@/lib/constants/types'
 import DataContext from '@/lib/context/DataContext'
 import { getYearPercentualPosition } from '@/lib/data/time'
 import clsx from 'clsx'
@@ -36,10 +36,7 @@ const EventYear = (props: EventYearProps) => {
   )
 
   return (
-    <div
-      className={rootStyle}
-      onMouseOver={() => setDisplayContent(displayContentFormat)}
-    >
+    <div className={rootStyle} onMouseOver={() => setDisplayContent(displayContentFormat)}>
       <div
         className={'bg-white w-[2px] h-[14px] absolute top-0'}
         style={{ left: `${startPercent}%` }}

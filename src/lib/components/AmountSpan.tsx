@@ -1,10 +1,11 @@
 'use client'
+
 import React from 'react'
 import DataContext from '@/lib/context/DataContext'
 import { nanoid } from 'nanoid'
 import clsx from 'clsx'
 import { years } from '@/lib/data/time'
-import { Fields, Region } from '@/lib/data'
+import { Fields, Region } from '@/lib/constants/enums'
 
 type AmountSpanProps = {
   title: string

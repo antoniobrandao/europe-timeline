@@ -1,10 +1,6 @@
-type WarType = {
-  start: number
-  end: number
-  name: string
-}
+import { WarType } from '@/lib/constants/types'
 
-const warsList = [
+const warsList: WarType[] = [
   { start: -753, end: -351, name: 'Roman–Etruscan Wars' },
   { start: -753, end: -494, name: 'Roman–Sabine wars' },
   { start: -743, end: -724, name: 'First Messenian War' },

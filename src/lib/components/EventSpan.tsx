@@ -2,10 +2,10 @@
 
 import React from 'react'
 import clsx from 'clsx'
-import { DisplayContentType } from '@/lib/data'
+import { DisplayContentType, EventSpanType } from '@/lib/constants/types'
 import DataContext from '@/lib/context/DataContext'
-import { notableSpanEvents, EventSpanType } from '@/lib/data/events'
-import { years, getYearPercentualPosition } from '@/lib/data/time'
+import { notableSpanEvents  } from '@/lib/data/events'
+import { getYearPercentualPosition } from '@/lib/data/time'
 
 type EventSpanProps = {
   ui_id: string

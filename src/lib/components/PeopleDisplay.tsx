@@ -1,6 +1,6 @@
 'use client'
 
-import { PhilosopherType } from '@/lib/data'
+import { PhilosopherType } from '@/lib/constants/types'
 import React from 'react'
 
 type MainDisplayProps = {

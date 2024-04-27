@@ -3,10 +3,8 @@
 import React from 'react'
 import DataContext from '@/lib/context/DataContext'
 import PeopleDisplay from '@/lib/components/PeopleDisplay'
-import { Fields } from '@/lib/data'
+import { Fields } from '@/lib/constants/enums'
 import clsx from 'clsx'
-// import { DisplayContentType, PhilosopherType } from '@/lib/data'
-// import MainDisplay from '@/lib/components/MainDisplay'
 
 const getFieldTextColor = (field: Fields) => {
   switch (field) {
@@ -73,7 +71,9 @@ const Sidebar = () => {
       {region && (
         <div className="flex gap-2">
           <p className="text-sm text-white">{region}</p>
-          {field && <p className={clsx('text-white text-sm', getFieldTextColor(field))}>({field})</p>}
+          {field && (
+            <p className={clsx('text-white text-sm', getFieldTextColor(field))}>({field})</p>
+          )}
         </div>
       )}
 

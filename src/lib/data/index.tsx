@@ -1,49 +1,5 @@
-export enum Fields {
-  SCIENCE = 'SCIENCE',
-  MIND = 'MIND',
-  SPIRITUALITY = 'SPIRITUALITY',
-  THEOLOGY = 'THEOLOGY',
-  HISTORY = 'HISTORY',
-  METAPHYSICS = 'METAPHYSICS',
-  MUSIC = 'MUSIC',
-  POLITICS = 'POLITICS',
-}
-
-export enum Region {
-  EUROPE = 'EUROPE',
-  MIDDLE_EAST = 'MIDDLE_EAST',
-  AFRICA = 'AFRICA',
-  NORTH_AMERICA = 'NORTH_AMERICA',
-}
-export enum Gender {
-  MALE = 'MALE',
-  FEMALE = 'FEMALE',
-}
-
-export type DisplayContentType = {
-  type: string,
-  ui_id?: string,
-  field?: Fields
-  region?: Region
-  gender?: Gender,
-  eventData?: any,
-}
-
-export type PhilosopherType = {
-  name: string,
-  gender: Gender,
-  birth: number
-  death: number
-  description: string
-  polytheist: boolean
-  christian: boolean
-  muslim: boolean
-  jewish: boolean
-  period: string
-  region: Region
-  fields: Fields[]
-  wikipediaUrl: string
-}
+import { Fields, Region, Gender } from '@/lib/constants/enums'
+import { PhilosopherType } from '@/lib/constants/types'
 
 export const westernPhilosophers: PhilosopherType[] = [
   {
@@ -127,8 +83,7 @@ export const westernPhilosophers: PhilosopherType[] = [
     gender: Gender.MALE,
     birth: 1,
     death: 50,
-    description:
-      'Physician',
+    description: 'Physician',
     polytheist: true,
     christian: false,
     muslim: false,
@@ -143,8 +98,7 @@ export const westernPhilosophers: PhilosopherType[] = [
     gender: Gender.FEMALE,
     birth: -320,
     death: -380,
-    description:
-      'Philosopher',
+    description: 'Philosopher',
     polytheist: true,
     christian: false,
     muslim: false,
@@ -159,8 +113,7 @@ export const westernPhilosophers: PhilosopherType[] = [
     gender: Gender.FEMALE,
     birth: -300,
     death: -350,
-    description:
-      'Philosopher',
+    description: 'Philosopher',
     polytheist: true,
     christian: false,
     muslim: false,
@@ -175,8 +128,7 @@ export const westernPhilosophers: PhilosopherType[] = [
     gender: Gender.FEMALE,
     birth: -500,
     death: -560,
-    description:
-      'Philosopher',
+    description: 'Philosopher',
     polytheist: true,
     christian: false,
     muslim: false,
@@ -191,8 +143,7 @@ export const westernPhilosophers: PhilosopherType[] = [
     gender: Gender.FEMALE,
     birth: -520,
     death: -580,
-    description:
-      'Philosopher',
+    description: 'Philosopher',
     polytheist: true,
     christian: false,
     muslim: false,
@@ -207,8 +158,7 @@ export const westernPhilosophers: PhilosopherType[] = [
     gender: Gender.FEMALE,
     birth: -350,
     death: -280,
-    description:
-      'Philosopher',
+    description: 'Philosopher',
     polytheist: true,
     christian: false,
     muslim: false,
@@ -223,8 +173,7 @@ export const westernPhilosophers: PhilosopherType[] = [
     gender: Gender.FEMALE,
     birth: -220,
     death: -170,
-    description:
-      'Music theorist, author of Pythagorean Principles of Music.',
+    description: 'Music theorist, author of Pythagorean Principles of Music.',
     polytheist: true,
     christian: false,
     muslim: false,
