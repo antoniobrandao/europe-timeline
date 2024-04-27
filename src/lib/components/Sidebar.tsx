@@ -61,8 +61,6 @@ const Sidebar = () => {
     eventSpanToDisplay = displayContent.eventData
   }
 
-  console.log('eventYearToDisplay', eventYearToDisplay)
-
   return (
     <div className="min-w-[320px] relative border-l border-white/10 m-0 bg-[#222] p-4 flex flex-col gap-4">
       {/* <p className="text-white">Year: {year}</p> */}

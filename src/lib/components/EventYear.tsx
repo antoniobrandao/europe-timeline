@@ -8,17 +8,16 @@ import { getYearPercentualPosition } from '@/lib/data/time'
 import clsx from 'clsx'
 
 type EventYearProps = {
-  name: string
   ui_id: string
 }
 
 const EventYear = (props: EventYearProps) => {
   const { setDisplayContent, displayContent } = React.useContext(DataContext)
-  const { ui_id, name } = props
+  const { ui_id } = props
   // @ts-ignore
   const eventData: EventYearType = notableYearEvents.find(
     // @ts-ignore
-    (event: EventYearType) => event.name === name,
+    (event: EventYearType) => event.id === ui_id,
   )
 
   const startPercent = getYearPercentualPosition(eventData.year)
@@ -45,7 +44,7 @@ const EventYear = (props: EventYearProps) => {
         className="text-[10px] uppercase pl-2 select-none absolute leading-none top-[2px]"
         style={{ left: `calc(${startPercent}% + 2px)` }}
       >
-        {name}
+        {eventData.name}
       </p>
     </div>
   )

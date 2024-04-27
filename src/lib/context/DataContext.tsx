@@ -3,8 +3,12 @@ import { westernPhilosophers } from '@/lib/data'
 import { DisplayContentType } from '@/lib/constants/types'
 
 const defaultValue = {
+  locked: false,
+  setLocked: (newState: boolean) => {},
+  xCoord: 0,
+  setXCoord: (newState: number) => {},
   year: 0,
-  setYear: (newYear: number) => {},
+  handleSetYear: (newYear: number) => {},
   westernPhilosophers: westernPhilosophers,
   mainStatusDisplay: '',
   setMainStatusDisplay: (newString: string) => {},
