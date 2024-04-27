@@ -3,9 +3,11 @@
 import React, { useEffect, useState, useRef } from 'react'
 import DataContext from '@/lib/context/DataContext'
 import { years, totalYears } from '@/lib/data/time'
-import { Fields, Region } from '@/lib/data'
+import { Fields, Region, DisplayContentType } from '@/lib/data'
+import clsx from 'clsx'
 
 type AmountSpanCanvasProps = {
+  ui_id: string
   title: string
   filterRegion?: Region
   filterField?: Fields
@@ -15,9 +17,9 @@ type AmountSpanCanvasProps = {
 const totalHeight = 200
 
 const AmountSpanCanvas = (props: AmountSpanCanvasProps) => {
-  const { title, filterRegion, filterField } = props
+  const { ui_id, title, filterRegion, filterField } = props
   let { color } = props
-  const { westernPhilosophers } = React.useContext(DataContext)
+  const { westernPhilosophers, displayContent, setDisplayContent } = React.useContext(DataContext)
   const [drawingComplete, setDrawingComplete] = useState<boolean>(false)
   if (!color) color = 'white'
   const canvasRef = useRef<HTMLCanvasElement | null>(null)
@@ -49,15 +51,30 @@ const AmountSpanCanvas = (props: AmountSpanCanvasProps) => {
     }
   }, [])
 
+  const displayContentFormat: DisplayContentType = {
+    ui_id: ui_id,
+    type: 'people_list',
+    region: filterRegion,
+    field: filterField,
+  }
+
+  const rootStyle = clsx(
+    'relative',
+    // @ts-ignore
+    ui_id && displayContent.ui_id && displayContent.ui_id === ui_id ? 'bg-[#222]' : 'bg-[#111]',
+  )
+
   return (
-    <div className="relative">
+    <div
+      className={rootStyle}
+      onMouseOver={() => setDisplayContent(displayContentFormat)}
+    >
       <p className="absolute top-1 left-1 text-white text-xs">{title}</p>
       <canvas
         ref={canvasRef}
         width={String(totalYears)}
         height={String(totalHeight)}
         className={drawingComplete ? 'w-full' : ''}
-        style={{ background: '#111' }}
       />
     </div>
   )

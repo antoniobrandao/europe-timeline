@@ -3,7 +3,7 @@ import Sidebar from '@/lib/components/Sidebar'
 
 export default function Home() {
   return (
-    <main className="flex bg-black text-white">
+    <main className="flex bg-black text-white mt-8">
       <Timelines />
       <Sidebar />
     </main>

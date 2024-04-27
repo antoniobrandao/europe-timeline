@@ -20,6 +20,15 @@ export enum Gender {
   FEMALE = 'FEMALE',
 }
 
+export type DisplayContentType = {
+  type: string,
+  ui_id?: string,
+  field?: Fields
+  region?: Region
+  gender?: Gender,
+  eventData?: any,
+}
+
 export type PhilosopherType = {
   name: string,
   gender: Gender,

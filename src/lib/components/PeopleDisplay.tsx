@@ -2,13 +2,15 @@
 
 import { PhilosopherType } from '@/lib/data'
 import React from 'react'
-import DataContext from '@/lib/context/DataContext'
 
-const MainDisplay = () => {
-  const { philosophersToDisplay } = React.useContext(DataContext)
+type MainDisplayProps = {
+  philosophersToDisplay: PhilosopherType[]
+}
+const MainDisplay = (props: MainDisplayProps) => {
+  const { philosophersToDisplay } = props
 
   return (
-    <div className="flex flex-wrap gap-4">
+    <div className="flex flex-col gap-2">
       {philosophersToDisplay?.map((philosopher: PhilosopherType) => {
         return (
           <div className="mb-2" key={philosopher.name}>

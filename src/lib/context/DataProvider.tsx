@@ -4,10 +4,11 @@ import React from 'react'
 import { useState, FC, ReactNode } from 'react'
 import DataContext from './DataContext'
 import { westernPhilosophers } from '@/lib/data'
-import { PhilosopherType } from '@/lib/data'
+import { DisplayContentType } from '@/lib/data'
 
 const DataProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const [mainStatusDisplay, setMainStatusDisplay] = useState<string>('')
+  const [displayContent, setDisplayContent] = useState<DisplayContentType>({type: 'none'})
   const [philosophersToDisplay, setPhilosophersToDisplay] = useState<any>(null)
   const [year, setYear] = useState<number>(0)
 
@@ -22,6 +23,8 @@ const DataProvider: FC<{ children: ReactNode }> = ({ children }) => {
         setMainStatusDisplay: setMainStatusDisplay,
         philosophersToDisplay: philosophersToDisplay,
         setPhilosophersToDisplay: setPhilosophersToDisplay,
+        displayContent: displayContent,
+        setDisplayContent: setDisplayContent,
       }}
     >
       {children}
