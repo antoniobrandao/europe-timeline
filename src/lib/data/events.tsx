@@ -51,8 +51,8 @@ export const notableSpanEvents: EventSpanType[] = [
     end: 1120,
   },
   {
-    id: EventId.INQUISITION,
-    name: 'Inquisition',
+    id: EventId.CHRISTIAN_INQUISITION,
+    name: 'Christian Inquisition',
     start: 1184,
     end: 1826,
   },

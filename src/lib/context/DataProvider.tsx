@@ -10,40 +10,47 @@ import { DisplayContentType } from '@/lib/constants/types'
 const DataProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const [mainStatusDisplay, setMainStatusDisplay] = useState<string>('')
   const [locked, setLocked] = useState<boolean>(false)
+  const [lockedX, setLockedX] = useState<number>(0)
   const [xCoord, setXCoord] = useState(0)
   const [displayContent, setDisplayContent] = useState<DisplayContentType>({ type: 'none' })
   const [philosophersToDisplay, setPhilosophersToDisplay] = useState<any>(null)
   const [year, setYear] = useState<number>(0)
 
   const handleSetYear = (year: number) => {
-    // console.log('handleSetYear')
     if (locked) return
-    // console.log('handleSetYear PASSED')
     setYear(year)
   }
 
   const handleSetXCoord = (newX: number) => {
-    if(!locked) {
-    console.log('HAHA mobing')
-    console.log('HAHA locked', locked)
-    console.log('HAHA xCoord', xCoord)
     setXCoord(newX)
-    const percentage = newX / (window.innerWidth - 320)
-    const year = getYearFromPercentage(percentage)
-    handleSetYear(year)}
+    if (!locked) {
+      const percentage = newX / (window.innerWidth - 320)
+      const year = getYearFromPercentage(percentage)
+      handleSetYear(year)
+    }
   }
 
   const handleSetDisplayContent = (data: DisplayContentType) => {
     if (locked) return
     setDisplayContent(data)
   }
+
+  const handleSetLocked = (newState: boolean) => {
+    if (newState === true) {
+      setLockedX(xCoord)
+    }
+    setLocked(newState)
+  }
+
   return (
     <DataContext.Provider
       value={{
+        lockedX: lockedX,
+        setLockedX: setLockedX,
         xCoord: xCoord,
         setXCoord: handleSetXCoord,
         locked: locked,
-        setLocked: setLocked,
+        setLocked: handleSetLocked,
         year: year,
         handleSetYear: handleSetYear,
         westernPhilosophers: westernPhilosophers,

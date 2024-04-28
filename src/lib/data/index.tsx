@@ -1293,7 +1293,7 @@ export const westernPhilosophers: PhilosopherType[] = [
     period: 'Classical Rome',
     region: Region.EUROPE,
     fields: [Fields.SCIENCE],
-    wikipediaUrl: 'https://en.wikipedia.org/wiki/Porphyry',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Frontinus',
   },
   {
     name: 'Pliny the Elder',

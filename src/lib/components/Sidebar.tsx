@@ -3,27 +3,9 @@
 import React from 'react'
 import DataContext from '@/lib/context/DataContext'
 import PeopleDisplay from '@/lib/components/PeopleDisplay'
-import { Fields } from '@/lib/constants/enums'
+import { getFieldTextColor } from '@/lib/ui_helpers'
 import clsx from 'clsx'
 
-const getFieldTextColor = (field: Fields) => {
-  switch (field) {
-    case Fields.METAPHYSICS:
-      return 'text-purple-500'
-    case Fields.POLITICS:
-      return 'text-red-500'
-    case Fields.SCIENCE:
-      return 'text-blue-400'
-    case Fields.THEOLOGY:
-      return 'text-yellow-500'
-    case Fields.MIND:
-      return 'text-green-500'
-    case Fields.HISTORY:
-      return 'text-pink-500'
-    case Fields.MIND:
-      return 'text-red-500'
-  }
-}
 const Sidebar = () => {
   const { year, displayContent, westernPhilosophers } = React.useContext(DataContext)
   let philosophersToDisplay
@@ -34,6 +16,8 @@ const Sidebar = () => {
   const region = displayContent.region || null
   // @ts-ignore
   const field = displayContent.field || null
+  // @ts-ignore
+  const gender = displayContent.gender || null
   // @ts-ignore
   const type = displayContent.type || null
 
@@ -46,6 +30,10 @@ const Sidebar = () => {
     if (field) {
       people = people.filter(person => person.fields.indexOf(field) > -1)
     }
+    if (gender) {
+      people = people.filter(person => person.gender === gender)
+    }
+
     philosophersToDisplay = people
   }
 
@@ -62,34 +50,33 @@ const Sidebar = () => {
   }
 
   return (
-    <div className="min-w-[320px] relative border-l border-white/10 m-0 bg-[#222] p-4 flex flex-col gap-4">
-      {/* <p className="text-white">Year: {year}</p> */}
-      {/* <MainDisplay /> */}
-      {/* @ts-ignore */}
-      {region && (
-        <div className="flex gap-2">
-          <p className="text-sm text-white">{region}</p>
-          {field && (
-            <p className={clsx('text-white text-sm', getFieldTextColor(field))}>({field})</p>
-          )}
-        </div>
-      )}
-
-      {philosophersToDisplay && <PeopleDisplay philosophersToDisplay={philosophersToDisplay} />}
-      {eventYearToDisplay && (
-        <div>
-          <p className="text-white">{eventYearToDisplay.year}</p>
-          <p className="text-white">{eventYearToDisplay.name}</p>
-        </div>
-      )}
-      {eventSpanToDisplay && (
-        <div>
-          <p className="text-white">
-            {eventSpanToDisplay.start} to {eventSpanToDisplay.end}
-          </p>
-          <p className="text-white">{eventSpanToDisplay.name}</p>
-        </div>
-      )}
+    <div
+      style={{ height: 'calc(100vh - 28px)' }}
+      className="min-w-[320px] relative top-[28px] border-l border-white/10 m-0 bg-[#171717] p-4 flex flex-col gap-4 overflow-auto"
+    >
+      <div className="flex flex-col gap-2">
+        {region && (
+          <div className="flex gap-2">
+            <p className="text-sm text-white">{region}</p>
+            {field && <p className={clsx('text-sm', getFieldTextColor(field))}>({field})</p>}
+          </div>
+        )}
+        {philosophersToDisplay && <PeopleDisplay philosophersToDisplay={philosophersToDisplay} />}
+        {eventYearToDisplay && (
+          <div>
+            <p className="text-white">{eventYearToDisplay.year}</p>
+            <p className="text-white">{eventYearToDisplay.name}</p>
+          </div>
+        )}
+        {eventSpanToDisplay && (
+          <div>
+            <p className="text-white">
+              {eventSpanToDisplay.start} to {eventSpanToDisplay.end}
+            </p>
+            <p className="text-white">{eventSpanToDisplay.name}</p>
+          </div>
+        )}
+      </div>
     </div>
   )
 }

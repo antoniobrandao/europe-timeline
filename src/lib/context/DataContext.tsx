@@ -3,6 +3,8 @@ import { westernPhilosophers } from '@/lib/data'
 import { DisplayContentType } from '@/lib/constants/types'
 
 const defaultValue = {
+  lockedX: 0,
+  setLockedX: (newX: number) => {},
   locked: false,
   setLocked: (newState: boolean) => {},
   xCoord: 0,

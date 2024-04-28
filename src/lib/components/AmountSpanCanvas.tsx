@@ -3,7 +3,7 @@
 import React, { useEffect, useState, useRef } from 'react'
 import DataContext from '@/lib/context/DataContext'
 import { years, totalYears } from '@/lib/data/time'
-import { Fields, Region } from '@/lib/constants/enums'
+import { Fields, Region, Gender } from '@/lib/constants/enums'
 import { DisplayContentType } from '@/lib/constants/types'
 import clsx from 'clsx'
 
@@ -12,13 +12,14 @@ type AmountSpanCanvasProps = {
   title: string
   filterRegion?: Region
   filterField?: Fields
+  filterGender?: Gender
   color?: string
 }
 
 const totalHeight = 200
 
 const AmountSpanCanvas = (props: AmountSpanCanvasProps) => {
-  const { ui_id, title, filterRegion, filterField } = props
+  const { ui_id, title, filterRegion, filterField, filterGender } = props
   let { color } = props
   const { westernPhilosophers, displayContent, setDisplayContent } = React.useContext(DataContext)
   const [drawingComplete, setDrawingComplete] = useState<boolean>(false)
@@ -31,6 +32,12 @@ const AmountSpanCanvas = (props: AmountSpanCanvasProps) => {
   if (filterField) {
     arrayToUse = arrayToUse.filter(person => person.fields.indexOf(filterField) > -1)
   }
+  if (filterGender) {
+    arrayToUse = arrayToUse.filter(person => person.gender === filterGender)
+    console.log('filterGender', filterGender)
+    console.log('arrayToUse', arrayToUse)
+  }
+
 
   useEffect(() => {
     if (canvasRef.current) {
@@ -56,6 +63,7 @@ const AmountSpanCanvas = (props: AmountSpanCanvasProps) => {
     type: 'people_list',
     region: filterRegion,
     field: filterField,
+    gender: filterGender,
   }
 
   const rootStyle = clsx(
