@@ -34,8 +34,6 @@ const AmountSpanCanvas = (props: AmountSpanCanvasProps) => {
   }
   if (filterGender) {
     arrayToUse = arrayToUse.filter(person => person.gender === filterGender)
-    console.log('filterGender', filterGender)
-    console.log('arrayToUse', arrayToUse)
   }
 
 
