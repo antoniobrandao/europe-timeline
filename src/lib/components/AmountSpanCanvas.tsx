@@ -40,14 +40,13 @@ const AmountSpanCanvas = (props: AmountSpanCanvasProps) => {
   useEffect(() => {
     if (canvasRef.current) {
       const ctx = canvasRef.current.getContext('2d')
-      // @ts-ignore
       if (ctx) {
         years.forEach(function (year, i) {
           const people = arrayToUse.filter(
             philosopher => philosopher.birth <= year && philosopher.death >= year,
           )
           const peopleNumber = people.length
-          const barHeight = peopleNumber * 2
+          const barHeight = peopleNumber * 4
           ctx.fillStyle = color
           ctx.fillRect(1 * i, totalHeight - barHeight, 1, barHeight)
         })
@@ -82,5 +81,4 @@ const AmountSpanCanvas = (props: AmountSpanCanvasProps) => {
     </div>
   )
 }
-
 export default AmountSpanCanvas

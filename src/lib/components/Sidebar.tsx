@@ -11,6 +11,8 @@ const Sidebar = () => {
   let philosophersToDisplay
   let eventYearToDisplay
   let eventSpanToDisplay
+  let descriptionToDisplay
+  let linkToDisplay
 
   // @ts-ignore
   const region = displayContent.region || null
@@ -33,7 +35,6 @@ const Sidebar = () => {
     if (gender) {
       people = people.filter(person => person.gender === gender)
     }
-
     philosophersToDisplay = people
   }
 
@@ -49,10 +50,38 @@ const Sidebar = () => {
     eventSpanToDisplay = displayContent.eventData
   }
 
+  // @ts-ignore
+  if (displayContent && displayContent.eventData && displayContent.eventData.link) {
+    linkToDisplay = (
+      // @ts-ignore
+      <a href={displayContent.eventData.link} target="_blank" className='block bg-[#1f1f1f] rounded-[4px] border border-[#333] p-2 hover:bg-[#333] hover:border-[#999] transition-colors duration-300 text-sm text-center'>
+        MORE INFO
+      </a>
+    )
+  }
+
+  // @ts-ignore
+  if (displayContent.eventData && displayContent.eventData.description) {
+    // @ts-ignore
+    const desc = displayContent.eventData.description
+
+    if (desc.length && desc.map) {
+      descriptionToDisplay = (
+        <div>
+          {desc.map((desc: string) => (
+            <p className="text-sm leading-[150%] text-[#999] mb-3">{desc}</p>
+          ))}
+        </div>
+      )
+    } else {
+      descriptionToDisplay = <p className="text-sm leading-[150%] text-[#999]">{desc}</p>
+    }
+  }
+
   return (
     <div
       style={{ height: 'calc(100vh - 28px)' }}
-      className="min-w-[320px] relative top-[28px] border-l border-white/10 m-0 bg-[#171717] p-4 flex flex-col gap-4 overflow-auto"
+      className="min-w-[320px] max-w-[320px] relative top-[28px] border-l border-white/10 m-0 bg-[#171717] p-4 flex flex-col gap-4 overflow-auto"
     >
       <div className="flex flex-col gap-2">
         {region && (
@@ -76,6 +105,8 @@ const Sidebar = () => {
             <p className="text-white">{eventSpanToDisplay.name}</p>
           </div>
         )}
+        {descriptionToDisplay}
+        {linkToDisplay}
       </div>
     </div>
   )

@@ -31,6 +31,7 @@ export type EventSpanType = {
   start: number
   end: number
   link?: string
+  description?: string | string[]
 }
 
 export type EventYearType = {
@@ -38,6 +39,7 @@ export type EventYearType = {
   name: string
   year: number
   link?: string
+  description?: string | string[]
 }
 
 export type WarType = {

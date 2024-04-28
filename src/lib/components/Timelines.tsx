@@ -15,15 +15,15 @@ const Timelines = () => {
     <div
       ref={areaRef}
       className="flex flex-col gap-1 bg-black text-white overflow-auto relative top-[28px] outline outline-blue-300"
-      style={{height: 'calc(100vh - 28px)' }}
+      style={{ height: 'calc(100vh - 28px)' }}
       onClick={() => setLocked(false)}
       onMouseMove={e => setXCoord(e.clientX)}
     >
       <EventSpan ui_id={EventId.ROMAN_REPUBLIC} bgColorClass="bg-red-400" />
       <EventSpan ui_id={EventId.ROMAN_EMPIRE} bgColorClass="bg-red-400" />
       <EventYear ui_id={EventId.CHRISTIANITY_APPEARS} />
-      <EventYear ui_id={EventId.ROMAN_EMPIRE_ADOPTS_CHRISTIANITY} />
-      <EventYear ui_id={EventId.CHRISTIANITY_MADE_OFFICAL_STATE_RELIGION} />
+      <EventYear ui_id={EventId.CHRISTIANITY_BECOMES_MANDATORY} />
+      {/* <EventYear ui_id={EventId.CHRISTIANITY_MADE_OFFICAL_STATE_RELIGION} /> */}
       <EventYear ui_id={EventId.CHRISTIANITY_BANS_OLYMPIC_GAMES} />
       <EventYear ui_id={EventId.ALTAR_OF_VICTORY_REMOVED} />
       <EventYear ui_id={EventId.JUSTINIAN_CLOSES_ACADEMY_OF_ATHENS} />
@@ -62,6 +62,14 @@ const Timelines = () => {
         filterGender={Gender.FEMALE}
         color="#00ff00"
       />
+      <div className="w-full flex justify-center mt-4">
+        <p className="text-white/50 text-xs" style={{zIndex: '9999999'}}>
+          Project by Antonio Brandao -{' '}
+          <a href="https://www.antoniobrandao.com" target="_blank">
+            www.antoniobrandao.com
+          </a>
+        </p>
+      </div>
     </div>
   )
 }

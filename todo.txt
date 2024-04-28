@@ -1,0 +1,5 @@
+color caret in another color when locked
+
+create multi-year-event YearEvent
+
+add descriptions to events, show in status display
