@@ -52,7 +52,7 @@ const AmountSpanCanvas = (props: AmountSpanCanvasProps) => {
         setDrawingComplete(true)
       }
     }
-  }, [])
+  })
 
   const displayContentFormat: DisplayContentType = {
     ui_id: ui_id,

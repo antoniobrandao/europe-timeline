@@ -43,7 +43,7 @@ const EventYear = (props: EventYearProps) => {
         style={{ left: `${startPercent}%` }}
       ></div>
       <p
-        className="text-[10px] uppercase pl-2 select-none absolute leading-none top-[2px]"
+        className="text-[10px] uppercase pl-2 select-none absolute leading-none top-[2px] truncate"
         style={{ left: `calc(${startPercent}% + 2px)` }}
       >
         {eventData.name}

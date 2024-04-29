@@ -14,7 +14,7 @@ const Timelines = () => {
   return (
     <div
       ref={areaRef}
-      className="col-span-9 bg-black text-white relative top-[28px] overflow-auto"
+      className="col-span-9 bg-black text-white relative top-[28px] overflow-y-auto overflow-x-hidden"
       style={{ height: 'calc(100vh - 28px)' }}
       onClick={() => setLocked(!locked)}
       onMouseMove={e => setXCoord(e.clientX)}
@@ -23,6 +23,7 @@ const Timelines = () => {
       <EventSpan ui_id={EventId.ROMAN_EMPIRE} bgColorClass="bg-red-600" />
       <EventSpan ui_id={EventId.PAX_ROMANA} bgColorClass="bg-red-600" />
       <EventYear ui_id={EventId.CHRISTIANITY_APPEARS} />
+      <EventSpan ui_id={EventId.AMBROSE_OF_MILAN} bgColorClass="bg-red-600" />
       <EventYear ui_id={EventId.CHRISTIANITY_BECOMES_MANDATORY} />
       {/* <EventYear ui_id={EventId.CHRISTIANITY_MADE_OFFICAL_STATE_RELIGION} /> */}
       <EventYear ui_id={EventId.CHRISTIANITY_BANS_OLYMPIC_GAMES} />
@@ -31,10 +32,13 @@ const Timelines = () => {
       <EventSpan ui_id={EventId.CHRISTIAN_DOMINATION_INSTITUTIONS} bgColorClass="bg-red-800" />
       <EventSpan ui_id={EventId.DARK_AGES} bgColorClass="bg-red-900" />
       <EventSpan ui_id={EventId.CHRISTIAN_INQUISITION} bgColorClass="bg-red-900" />
-      <EventSpan ui_id={EventId.ISLAMIC_GOLDEN_AGE} bgColorClass="bg-yellow-600" />
+      <EventSpan ui_id={EventId.WITCH_HUNTS} bgColorClass="bg-red-900" />
+      <EventYear ui_id={EventId.PROTESTANT_REFORMATION} />
+      <EventSpan ui_id={EventId.ISLAMIC_GOLDEN_AGE} bgColorClass="bg-yellow-700" />
       <EventSpan ui_id={EventId.CAROLOGIAN_RENAISSANCE} bgColorClass="bg-blue-500" />
       <EventSpan ui_id={EventId.TWELVE_CENTURY_RENAISSANCE} bgColorClass="bg-blue-500" />
       <EventYear ui_id={EventId.FALL_OF_CONSTANTINOPLE} />
+      <EventYear ui_id={EventId.MEDICI_REOPENS_PLATONIC_ACADEMY} />
       <EventSpan ui_id={EventId.ITALIAN_RENAISSANCE} bgColorClass="bg-blue-500" />
       <div className="bg-white/20 h-[18px]">
         <p className="text-white text-xs pl-1">EUROPE</p>
