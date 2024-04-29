@@ -44,6 +44,18 @@ export const notableSpanEvents: EventSpanType[] = [
     ],
   },
   {
+    id: EventId.PAX_ROMANA,
+    name: 'Pax Romana',
+    start: -27,
+    end: 180,
+    link: 'https://en.wikipedia.org/wiki/Roman_Empire',
+    description: [
+      `The Pax Romana (Latin for "Roman peace") is a roughly 200-year-long period of Roman history which is identified as a ,
+      golden age of increased and sustained Roman imperialism, relative peace and order, 
+      prosperous stability, hegemonic power, and regional expansion.`
+    ],
+  },
+  {
     id: EventId.CAROLOGIAN_RENAISSANCE,
     name: 'Carolingian Renaissance',
     start: 800,

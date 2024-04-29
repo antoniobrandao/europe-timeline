@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="bg-black text-white h-screen">
       <Caret />
-      <div className="flex">
+      <div className="grid grid-cols-12">
         <Timelines />
         <Sidebar />
       </div>

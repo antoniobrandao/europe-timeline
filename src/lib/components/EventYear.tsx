@@ -29,15 +29,17 @@ const EventYear = (props: EventYearProps) => {
   }
 
   const rootStyle = clsx(
-    'flex h-[14px] relative bg-white/10 w-full',
+    'flex h-[14px] relative bg-white/10 w-full mb-1',
     // @ts-ignore
     ui_id && displayContent.ui_id && displayContent.ui_id === ui_id ? 'bg-white/30' : '',
   )
 
+  const barStyle = 'bg-white w-[2px] h-[14px] absolute top-0'
+
   return (
     <div className={rootStyle} onMouseOver={() => setDisplayContent(displayContentFormat)}>
       <div
-        className={'bg-white w-[2px] h-[14px] absolute top-0'}
+        className={barStyle}
         style={{ left: `${startPercent}%` }}
       ></div>
       <p

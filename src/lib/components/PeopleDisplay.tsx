@@ -6,10 +6,10 @@ import { getFieldTextColor } from '@/lib/ui_helpers'
 import React from 'react'
 import clsx from 'clsx'
 
-type MainDisplayProps = {
+type PeopleDisplayProps = {
   philosophersToDisplay: PhilosopherType[]
 }
-const MainDisplay = (props: MainDisplayProps) => {
+const PeopleDisplay = (props: PeopleDisplayProps) => {
   const { philosophersToDisplay } = props
 
   return (
@@ -27,8 +27,8 @@ const MainDisplay = (props: MainDisplayProps) => {
             </p>
 
             <div className="flex gap-1">
-              {philosopher.fields.map((field: Fields) => (
-                <p className={clsx('text-[10px]', getFieldTextColor(field))}>{field}</p>
+              {philosopher.fields.map((field: Fields, index: number) => (
+                <p key={philosopher.name + 'field' + index} className={clsx('text-[10px]', getFieldTextColor(field))}>{field}</p>
               ))}
             </div>
           </a>
@@ -37,4 +37,4 @@ const MainDisplay = (props: MainDisplayProps) => {
     </div>
   )
 }
-export default MainDisplay
+export default PeopleDisplay

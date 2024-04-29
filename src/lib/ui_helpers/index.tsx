@@ -5,7 +5,7 @@ export const getFieldTextColor = (field: Fields) => {
       case Fields.METAPHYSICS:
         return 'text-purple-500'
       case Fields.POLITICS:
-        return 'text-red-500'
+        return 'text-red-400'
       case Fields.SCIENCE:
         return 'text-blue-400'
       case Fields.THEOLOGY:

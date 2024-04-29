@@ -68,8 +68,8 @@ const Sidebar = () => {
     if (desc.length && desc.map) {
       descriptionToDisplay = (
         <div>
-          {desc.map((desc: string) => (
-            <p className="text-sm leading-[150%] text-[#999] mb-3">{desc}</p>
+          {desc.map((desc: string, index: number) => (
+            <p key={desc.charAt(0) ? desc.charAt(0) + index : index} className="text-sm leading-[150%] text-[#999] mb-3">{desc}</p>
           ))}
         </div>
       )
@@ -80,8 +80,9 @@ const Sidebar = () => {
 
   return (
     <div
+      id='sidebar'
       style={{ height: 'calc(100vh - 28px)' }}
-      className="min-w-[320px] max-w-[320px] relative top-[28px] border-l border-white/10 m-0 bg-[#171717] p-4 flex flex-col gap-4 overflow-auto"
+      className="w-full relative top-[28px] border-l border-white/10 m-0 bg-[#171717] col-span-3 p-4 flex flex-col gap-4 overflow-auto"
     >
       <div className="flex flex-col gap-2">
         {region && (

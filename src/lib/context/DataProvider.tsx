@@ -24,7 +24,8 @@ const DataProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const handleSetXCoord = (newX: number) => {
     setXCoord(newX)
     if (!locked) {
-      const percentage = newX / (window.innerWidth - 320)
+      // @ts-ignore
+      const percentage = newX / (window.innerWidth - document.getElementById('sidebar').clientWidth)
       const year = getYearFromPercentage(percentage)
       handleSetYear(year)
     }

@@ -16,7 +16,7 @@ type AmountSpanCanvasProps = {
   color?: string
 }
 
-const totalHeight = 200
+const totalHeight = 80
 
 const AmountSpanCanvas = (props: AmountSpanCanvasProps) => {
   const { ui_id, title, filterRegion, filterField, filterGender } = props
@@ -36,7 +36,6 @@ const AmountSpanCanvas = (props: AmountSpanCanvasProps) => {
     arrayToUse = arrayToUse.filter(person => person.gender === filterGender)
   }
 
-
   useEffect(() => {
     if (canvasRef.current) {
       const ctx = canvasRef.current.getContext('2d')
@@ -46,7 +45,7 @@ const AmountSpanCanvas = (props: AmountSpanCanvasProps) => {
             philosopher => philosopher.birth <= year && philosopher.death >= year,
           )
           const peopleNumber = people.length
-          const barHeight = peopleNumber * 4
+          const barHeight = peopleNumber
           ctx.fillStyle = color
           ctx.fillRect(1 * i, totalHeight - barHeight, 1, barHeight)
         })
@@ -64,19 +63,21 @@ const AmountSpanCanvas = (props: AmountSpanCanvasProps) => {
   }
 
   const rootStyle = clsx(
-    'relative',
+    'relative h-[80px]',
     // @ts-ignore
-    ui_id && displayContent.ui_id && displayContent.ui_id === ui_id ? 'bg-[#222]' : 'bg-[#111]',
+    ui_id && displayContent.ui_id && displayContent.ui_id === ui_id ? 'bg-[#1a1a1a]' : 'bg-[#111]',
   )
 
   return (
     <div className={rootStyle} onMouseOver={() => setDisplayContent(displayContentFormat)}>
-      <p className="absolute top-1 left-1 text-white text-xs">{title}</p>
+      <p className="absolute bg-transparent top-1 left-1 text-white/40 text-xs">
+        {title} : {arrayToUse.length}
+      </p>
       <canvas
         ref={canvasRef}
         width={String(totalYears)}
-        height={String(totalHeight)}
-        className={drawingComplete ? 'w-full' : ''}
+        height='80'
+        className={clsx(drawingComplete ? 'w-full h-[80px]' : '', 'absolute bottom-0')}
       />
     </div>
   )
