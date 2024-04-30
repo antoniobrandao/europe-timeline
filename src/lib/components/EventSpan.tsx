@@ -41,7 +41,7 @@ const EventSpan = (props: EventSpanProps) => {
         className={clsx('!h-[14px] absolute top-0', bgColorClass)}
         style={{ left: `${startPercent}%`, width: `${endPercent - startPercent}%` }}
       ></div>
-      <p className="text-[10px] pl-2 select-none absolute leading-none top-[2px] uppercase" style={{ left: `${startPercent}%` }}>
+      <p className="text-[10px] pl-1 select-none absolute leading-none top-[1px] uppercase" style={{ left: `${startPercent}%` }}>
         {eventData.name}
       </p>
     </div>
