@@ -19,6 +19,9 @@ const Timelines = () => {
       onClick={() => setLocked(!locked)}
       onMouseMove={e => setXCoord(e.clientX)}
     >
+      <div className="bg-white/20 h-[18px]">
+        <p className="text-white text-[11px] pl-1 relative top-[1px]">NOTABLE EVENTS</p>
+      </div>
       <EventSpan ui_id={EventId.ROMAN_REPUBLIC} bgColorClass="bg-red-600" />
       <EventSpan ui_id={EventId.ROMAN_EMPIRE} bgColorClass="bg-red-600" />
       <EventSpan ui_id={EventId.PAX_ROMANA} bgColorClass="bg-red-600" />
@@ -41,41 +44,41 @@ const Timelines = () => {
       <EventYear ui_id={EventId.MEDICI_REOPENS_PLATONIC_ACADEMY} />
       <EventSpan ui_id={EventId.ITALIAN_RENAISSANCE} bgColorClass="bg-blue-500" />
       <div className="bg-white/20 h-[18px]">
-        <p className="text-white text-xs pl-1">EUROPE</p>
+        <p className="text-white text-[11px] pl-1 relative top-[1px]">NOTABLE PHILOSOPHERS - EUROPE</p>
       </div>
-      <AmountSpanCanvas ui_id="b1" title="Philosophers (all)" filterRegion={Region.EUROPE} />
+      <AmountSpanCanvas ui_id="b1" title="All" filterRegion={Region.EUROPE} />
       <AmountSpanCanvas
         ui_id="b2"
-        title="Philosophers (SCIENCE only)"
+        title="Science only"
         filterRegion={Region.EUROPE}
         filterField={Fields.SCIENCE}
         color="#3b82f6"
       />
       <AmountSpanCanvas
         ui_id="b5"
-        title="Philosophers (FEMALE)"
+        title="Female only"
         filterGender={Gender.FEMALE}
         color="#00ff00"
       />
       <div className="bg-white/20 h-[18px]">
-        <p className="text-white text-xs pl-1">MIDDLE EAST</p>
+        <p className="text-white text-[11px] pl-1 relative top-[1px]">NOTABLE PHILOSOPHERS - MIDDLE EAST</p>
       </div>
       <AmountSpanCanvas
         ui_id="b3"
-        title="Philosophers (all)"
+        title="All"
         filterRegion={Region.MIDDLE_EAST}
         color="#ca8a03"
       />
       <AmountSpanCanvas
         ui_id="b4"
-        title="Philosophers (SCIENCE only)"
+        title="Science only"
         filterRegion={Region.MIDDLE_EAST}
         filterField={Fields.SCIENCE}
         color="#3b82f6"
       />
       <AmountSpanCanvas
         ui_id="b55"
-        title="FEMALE Philosophers"
+        title="Female only"
         filterRegion={Region.MIDDLE_EAST}
         filterGender={Gender.FEMALE}
         color="#00ff00"
