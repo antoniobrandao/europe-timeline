@@ -3,3 +3,11 @@ color caret in another color when locked
 create multi-year-event YearEvent
 
 add descriptions to events, show in status display
+
+
+
+ADD THESE PHILOSOPHERS
+https://en.wikipedia.org/wiki/Diogenes_Laertius#Lives_and_Opinions_of_Eminent_Philosophers
+
+REVISIT PLETHON
+https://en.wikipedia.org/wiki/Gemistos_Plethon#Council_of_Florence
