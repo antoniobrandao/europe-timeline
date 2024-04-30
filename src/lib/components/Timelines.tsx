@@ -43,6 +43,8 @@ const Timelines = () => {
       <EventYear ui_id={EventId.FALL_OF_CONSTANTINOPLE} />
       <EventYear ui_id={EventId.MEDICI_REOPENS_PLATONIC_ACADEMY} />
       <EventSpan ui_id={EventId.ITALIAN_RENAISSANCE} bgColorClass="bg-blue-500" />
+      <EventSpan ui_id={EventId.SCIENTIFIC_REVOLUTION} bgColorClass="bg-blue-500" />
+      <EventSpan ui_id={EventId.INDUSTRIAL_REVOLUTION} bgColorClass="bg-blue-500" />
       <div className="bg-white/20 h-[18px]">
         <p className="text-white text-[11px] pl-1 relative top-[1px]">NOTABLE PHILOSOPHERS - EUROPE</p>
       </div>

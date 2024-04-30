@@ -158,6 +158,27 @@ export const notableSpanEvents: EventSpanType[] = [
       Roughly 80% of those convicted were women, most of them over the age of 40. In some regions, convicted witches were burnt at the stake.`,
     ],
   },
+  {
+    id: EventId.INDUSTRIAL_REVOLUTION,
+    name: 'Industrial Revolution',
+    start: 1760,
+    end: 1840,
+    link: 'https://en.wikipedia.org/wiki/Industrial_Revolution',
+    description: [
+      `The Industrial Revolution was a period of global transition of the human economy towards more widespread, efficient and stable manufacturing processes that succeeded the Agricultural Revolution. Beginning in Great Britain, the Industrial Revolution spread to continental Europe and the United States, during the period from around 1760 to about 1820–1840.`,
+    ],
+  },
+  {
+    id: EventId.SCIENTIFIC_REVOLUTION,
+    name: 'Scientific Revolution',
+    start: 1543,
+    end: 1687,
+    link: 'https://en.wikipedia.org/wiki/Industrial_Revolution',
+    description: [
+      `The Scientific Revolution was a series of events that marked the emergence of modern science during the early modern period, when developments in mathematics, physics, astronomy, biology (including human anatomy) and chemistry transformed the views of society about nature.`,
+      `It can be seen as a product of the the success of the High Renaissance.`,
+    ],
+  },
 ]
 
 export const notableYearEvents: EventYearType[] = [
