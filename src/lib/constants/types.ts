@@ -14,7 +14,7 @@ export type PhilosopherType = {
   gender: Gender
   birth: number
   death: number
-  description: string
+  description: string | string[]
   polytheist: boolean
   christian: boolean
   muslim: boolean

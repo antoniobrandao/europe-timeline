@@ -28,13 +28,14 @@ const EventYear = (props: EventYearProps) => {
     eventData: eventData,
   }
 
+  // @ts-ignore
+  const selected = ui_id && displayContent.ui_id && displayContent.ui_id === ui_id
   const rootStyle = clsx(
-    'flex h-[14px] relative bg-white/10 w-full mb-1',
-    // @ts-ignore
-    ui_id && displayContent.ui_id && displayContent.ui_id === ui_id ? 'bg-white/30' : '',
+    'flex h-[13px] relative bg-white/10 w-full mb-1',
+    selected ? 'bg-white/30' : '',
   )
 
-  const barStyle = 'bg-white w-[2px] h-[14px] absolute top-0'
+  const barStyle = 'bg-white w-[2px] h-[13px] absolute top-0'
 
   return (
     <div className={rootStyle} onMouseOver={() => setDisplayContent(displayContentFormat)}>
@@ -43,7 +44,7 @@ const EventYear = (props: EventYearProps) => {
         style={{ left: `${startPercent}%` }}
       ></div>
       <p
-        className="text-[10px] uppercase pl-2 select-none absolute leading-none top-[2px] truncate"
+        className={clsx(selected ? 'text-white' : 'text-white/80', "text-[10px] uppercase pl-2 select-none absolute leading-none top-[2px] truncate")}
         style={{ left: `calc(${startPercent}% + 2px)` }}
       >
         {eventData.name}

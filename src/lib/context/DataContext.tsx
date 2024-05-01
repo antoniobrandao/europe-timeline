@@ -1,5 +1,5 @@
 import { createContext } from 'react'
-import { westernPhilosophers } from '@/lib/data'
+import { westernPhilosophers } from '@/lib/data/people'
 import { DisplayContentType } from '@/lib/constants/types'
 
 const defaultValue = {

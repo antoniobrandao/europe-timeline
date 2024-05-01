@@ -239,6 +239,33 @@ export const notableYearEvents: EventYearType[] = [
     ],
   },
   {
+    id: EventId.PLETHON_VISITS_FLORENCE,
+    name: 'Plethon visits Florence',
+    link: 'https://en.wikipedia.org/wiki/Gemistos_Plethon',
+    year: 1438,
+    description: [
+      `The man responsible for reintroducing Plato's ideas to Western Europe, and a major influence on the Italian Renaissance`,
+      `Known as one of the most renowned philosophers of the late Byzantine era, he travelled to Florence in Italy in 1438–1439 to 
+      attend the Council of Florence to discuss a union of the Orthodox and Catholic churches.`,
+      `Despite not being a theologian, Plethon was chosen to accompany the Byzantine
+      emperor John VIII Palaiologos to the Council on the basis of his renowned wisdom and morality.`,
+      `In Florence, Plethon met Cosimo de' Medici, whom he influenced to found a new Platonic Academy, which, 
+      under Marsilio Ficino, proceeded to translate into Latin all of Plato's works, the Enneads of 
+      Plotinus, and various other Neoplatonist works.`,
+      `At the invitation of some Florentine humanists he set up a temporary school to lecture
+      on the difference between Plato and Aristotle.`,
+      `Few of Plato's writings were studied in the Latin West at that time,
+      and he essentially reintroduced much of Plato to the Western world.`,
+      `He was a chief pioneer of the revival of Greek scholarship in Western Europe.
+      As revealed in his last literary work, the Nomoi or Book of Laws, which he circulated
+      only among close friends, he rejected Christianity in favour of a return to the worship
+      of the classical Hellenic gods, mixed with ancient wisdom based on Zoroaster and the Magi,
+      based largely upon the ideas of humanism prevalent at the time,
+      incorporating themes such as rationalism and logic`,
+      `His book Nómoi ("Book of Laws") was burned by Gennadius II, Patriarch of Constantinople in 1460.`,
+    ],
+  },
+  {
     id: EventId.PROTESTANT_REFORMATION,
     name: 'Protestant Reformation',
     year: 1517,

@@ -3,8 +3,8 @@
 import React from 'react'
 import { useState, FC, ReactNode } from 'react'
 import DataContext from './DataContext'
-import { getYearFromPercentage } from '@/lib/data/time'
-import { westernPhilosophers } from '@/lib/data'
+import { getYearPercentualPosition, getYearFromPercentage } from '@/lib/data/time'
+import { westernPhilosophers } from '@/lib/data/people'
 import { DisplayContentType } from '@/lib/constants/types'
 
 const DataProvider: FC<{ children: ReactNode }> = ({ children }) => {
@@ -32,13 +32,28 @@ const DataProvider: FC<{ children: ReactNode }> = ({ children }) => {
   }
 
   const handleSetDisplayContent = (data: DisplayContentType) => {
-    if (locked) return
+    // if (locked) return
     setDisplayContent(data)
+    console.log('data', data)
   }
-
+  
   const handleSetLocked = (newState: boolean) => {
     if (newState === true) {
       setLockedX(xCoord)
+      const eventData: any = displayContent.eventData
+      let yearValue
+      if(eventData && eventData.year) yearValue = eventData.year
+      if(!yearValue && eventData && eventData.start) yearValue = eventData.start
+      if(eventData && yearValue) {
+        console.log('OHS DOIFH OSDIFJDS')
+        const timelineElement = document.getElementById('timelines-element')
+        // @ts-ignore
+        const timelineElementWidth = timelineElement.clientWidth
+        const percentualPosition = getYearPercentualPosition(yearValue)
+        console.log('percentualPosition', percentualPosition)
+        const newPosition = percentualPosition * timelineElementWidth / 100
+        setLockedX(newPosition)
+      }
     }
     setLocked(newState)
   }

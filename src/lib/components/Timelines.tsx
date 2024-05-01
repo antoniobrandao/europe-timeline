@@ -14,6 +14,7 @@ const Timelines = () => {
   return (
     <div
       ref={areaRef}
+      id='timelines-element'
       className="col-span-9 bg-black text-white relative top-[28px] overflow-y-auto overflow-x-hidden"
       style={{ height: 'calc(100vh - 28px)' }}
       onClick={() => setLocked(!locked)}
@@ -41,12 +42,13 @@ const Timelines = () => {
       <EventSpan ui_id={EventId.CAROLOGIAN_RENAISSANCE} bgColorClass="bg-blue-500" />
       <EventSpan ui_id={EventId.TWELVE_CENTURY_RENAISSANCE} bgColorClass="bg-blue-500" />
       <EventYear ui_id={EventId.FALL_OF_CONSTANTINOPLE} />
+      <EventYear ui_id={EventId.PLETHON_VISITS_FLORENCE} />
       <EventYear ui_id={EventId.MEDICI_REOPENS_PLATONIC_ACADEMY} />
       <EventSpan ui_id={EventId.ITALIAN_RENAISSANCE} bgColorClass="bg-blue-500" />
       <EventSpan ui_id={EventId.SCIENTIFIC_REVOLUTION} bgColorClass="bg-blue-500" />
       <EventSpan ui_id={EventId.INDUSTRIAL_REVOLUTION} bgColorClass="bg-blue-500" />
       <div className="bg-white/20 h-[18px]">
-        <p className="text-white text-[11px] pl-1 relative top-[1px]">NOTABLE PHILOSOPHERS - EUROPE</p>
+        <p className="text-white text-[11px] pl-1 relative top-[1px]">NOTABLE INTELLECTUALS - EUROPE</p>
       </div>
       <AmountSpanCanvas ui_id="b1" title="All" filterRegion={Region.EUROPE} />
       <AmountSpanCanvas
@@ -63,7 +65,7 @@ const Timelines = () => {
         color="#00ff00"
       />
       <div className="bg-white/20 h-[18px]">
-        <p className="text-white text-[11px] pl-1 relative top-[1px]">NOTABLE PHILOSOPHERS - MIDDLE EAST</p>
+        <p className="text-white text-[11px] pl-1 relative top-[1px]">NOTABLE INTELLECTUALS - MIDDLE EAST</p>
       </div>
       <AmountSpanCanvas
         ui_id="b3"

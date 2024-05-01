@@ -29,19 +29,20 @@ const EventSpan = (props: EventSpanProps) => {
     eventData: eventData,
   }
 
+  // @ts-ignore
+  const selected = ui_id && displayContent.ui_id && displayContent.ui_id === ui_id
   const rootStyle = clsx(
-    'flex w-full !h-[14px] overflow-hidden relative bg-white/10 mb-1',
-    // @ts-ignore
-    ui_id && displayContent.ui_id && displayContent.ui_id === ui_id ? 'bg-white/30' : '',
+    'flex w-full !h-[13px] overflow-hidden relative bg-white/10 mb-1',
+    selected ? 'bg-white/30' : '',
   )
 
   return (
     <div className={rootStyle} onMouseOver={() => setDisplayContent(displayContentFormat)}>
       <div
-        className={clsx('!h-[14px] absolute top-0', bgColorClass)}
+        className={clsx('!h-[13px] absolute top-0', bgColorClass)}
         style={{ left: `${startPercent}%`, width: `${endPercent - startPercent}%` }}
       ></div>
-      <p className="text-[10px] pl-1 select-none absolute leading-none top-[1px] uppercase truncate" style={{ left: `${startPercent}%` }}>
+      <p className={clsx(selected ? 'text-white' : 'text-white/80', "text-[10px] pl-1 select-none absolute leading-none top-[1px] uppercase truncate")} style={{ left: `${startPercent}%` }}>
         {eventData.name}
       </p>
     </div>
