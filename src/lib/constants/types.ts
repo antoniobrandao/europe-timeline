@@ -3,7 +3,7 @@ import { Fields, Region, Gender, EventId, EventType } from '@/lib/constants/enum
 export type DisplayContentType = {
   data: PhilosopherType[] | EventSpanType | EventYearType | any
   type: EventType | null
-  ref: any
+  ref?: any
   // ui_id?: string
   // field?: Fields
   // region?: Region
