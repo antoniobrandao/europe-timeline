@@ -8,7 +8,7 @@ export const notableSpanEvents: EventSpanType[] = [
     id: EventId.CHRISTIAN_DOMINATION_INSTITUTIONS,
     name: 'Christian Domination of Institutions',
     start: 400,
-    end: 1600,
+    end: 1550,
     description: [
       `During this period the Chrisitian religion held complete domination of the European governments`,
       `Kings required their blessing to be appointed, and could be deposed without it`,
@@ -189,9 +189,30 @@ export const notableYearEvents: EventYearType[] = [
   {
     id: EventId.CHRISTIANITY_APPEARS,
     name: 'Christianity appears',
-    year: 70,
+    year: 60,
     description:
       "There isn't a specific date for the appearance of Christianity, but it is believed to have started around 70 AD.",
+  },
+  {
+    id: EventId.ROME_CONQUERS_JUDEA,
+    name: 'Rome conquers Judea',
+    year: 63,
+    description:
+      [
+        `Following the end of the Third Mithridatic War, Pompey established the province of Syria
+        (including Judea) after defeating Mithridates VI Eupator and sacking Jerusalem.`,
+      ],
+  },
+  {
+    id: EventId.SECOND_TEMPLE_DESTROYED,
+    name: 'Destruction of the Second Temple',
+    year: 70,
+    description:
+      [
+        `The siege of Jerusalem of 70 CE was the decisive event of the First Jewish–Roman War (66–73 CE),
+        in which the Roman army led by future emperor Titus besieged Jerusalem, the center of Jewish rebel resistance in the Roman province of Judaea.`,
+        `Following a five-month siege, the Romans destroyed the city and the Second Jewish Temple.`
+      ],
   },
   {
     id: EventId.CONSTANTINE_ADOPTS_CHRISTIANITY,

@@ -55,14 +55,6 @@ const AmountSpanCanvas = (props: AmountSpanCanvasProps) => {
     }
   })
 
-  // const displayContentFormat: DisplayContentType = {
-  //   ui_id: ui_id,
-  //   type: 'people_list',
-  //   region: filterRegion,
-  //   field: filterField,
-  //   gender: filterGender,
-  // }
-
   //
   // @ts-ignore
   const selected =

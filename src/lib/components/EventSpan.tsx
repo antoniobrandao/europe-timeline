@@ -29,7 +29,7 @@ const EventSpan = (props: EventSpanProps) => {
   // const selected = ui_id && displayContent.ui_id && displayContent.ui_id === ui_id
   const selected = displayContent && displayContent.data && displayContent.data.name && displayContent.data.name === eventData.name
   const rootStyle = clsx(
-    'flex w-full !h-[13px] overflow-hidden relative bg-white/10 mb-0.5',
+    'flex w-full !h-[12px] overflow-hidden relative bg-white/10 mb-0.5',
     selected ? 'bg-white/30' : '',
   )
 
@@ -49,7 +49,7 @@ const EventSpan = (props: EventSpanProps) => {
       <div
         // @ts-ignore
         ref={eventSpanElRef}
-        className={clsx('!h-[13px] absolute top-0', bgColorClass)}
+        className={clsx('!h-[12px] absolute top-0', bgColorClass)}
         style={{ left: `${startPercent}%`, width: `${endPercent - startPercent}%` }}
       ></div>
       <p className={clsx(selected ? 'text-white' : 'text-white/80', "text-[10px] pl-1 select-none absolute leading-none top-[1px] uppercase truncate")} style={{ left: `${startPercent}%` }}>

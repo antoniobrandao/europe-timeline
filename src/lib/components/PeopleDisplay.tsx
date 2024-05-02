@@ -52,7 +52,7 @@ const PeopleDisplay = (props: PeopleDisplayProps) => {
               {philosopher.fields.map((field: Fields, index: number) => (
                 <p
                   key={philosopher.name + 'field' + index}
-                  className={clsx('text-[10px]', getFieldTextColor(field))}
+                  className={clsx('text-[10px] uppercase', getFieldTextColor(field))}
                 >
                   {field}
                 </p>

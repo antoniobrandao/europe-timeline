@@ -27,24 +27,26 @@ const Timelines = () => {
       <EventSpan ui_id={EventId.ROMAN_EMPIRE} bgColorClass="bg-red-600" />
       <EventSpan ui_id={EventId.PAX_ROMANA} bgColorClass="bg-red-600" />
       <EventYear ui_id={EventId.CHRISTIANITY_APPEARS} />
+      <EventYear ui_id={EventId.ROME_CONQUERS_JUDEA} />
+      <EventYear ui_id={EventId.SECOND_TEMPLE_DESTROYED} />
       <EventSpan ui_id={EventId.AMBROSE_OF_MILAN} bgColorClass="bg-red-600" />
       <EventYear ui_id={EventId.CHRISTIANITY_BECOMES_MANDATORY} />
       {/* <EventYear ui_id={EventId.CHRISTIANITY_MADE_OFFICAL_STATE_RELIGION} /> */}
-      <EventYear ui_id={EventId.CHRISTIANITY_BANS_OLYMPIC_GAMES} />
       <EventYear ui_id={EventId.ALTAR_OF_VICTORY_REMOVED} />
-      <EventYear ui_id={EventId.JUSTINIAN_CLOSES_ACADEMY_OF_ATHENS} />
+      <EventYear ui_id={EventId.CHRISTIANITY_BANS_OLYMPIC_GAMES} />
       <EventSpan ui_id={EventId.CHRISTIAN_DOMINATION_INSTITUTIONS} bgColorClass="bg-red-800" />
+      <EventYear ui_id={EventId.JUSTINIAN_CLOSES_ACADEMY_OF_ATHENS} />
       <EventSpan ui_id={EventId.DARK_AGES} bgColorClass="bg-red-900" />
-      <EventSpan ui_id={EventId.CHRISTIAN_INQUISITION} bgColorClass="bg-red-900" />
-      <EventSpan ui_id={EventId.WITCH_HUNTS} bgColorClass="bg-red-900" />
-      <EventYear ui_id={EventId.PROTESTANT_REFORMATION} />
       <EventSpan ui_id={EventId.ISLAMIC_GOLDEN_AGE} bgColorClass="bg-yellow-700" />
       <EventSpan ui_id={EventId.CAROLOGIAN_RENAISSANCE} bgColorClass="bg-blue-600" />
       <EventSpan ui_id={EventId.TWELVE_CENTURY_RENAISSANCE} bgColorClass="bg-blue-600" />
-      <EventYear ui_id={EventId.FALL_OF_CONSTANTINOPLE} />
+      <EventSpan ui_id={EventId.CHRISTIAN_INQUISITION} bgColorClass="bg-red-900" />
+      <EventSpan ui_id={EventId.WITCH_HUNTS} bgColorClass="bg-red-900" />
       <EventYear ui_id={EventId.PLETHON_VISITS_FLORENCE} />
+      <EventYear ui_id={EventId.FALL_OF_CONSTANTINOPLE} />
       <EventYear ui_id={EventId.MEDICI_REOPENS_PLATONIC_ACADEMY} />
       <EventSpan ui_id={EventId.ITALIAN_RENAISSANCE} bgColorClass="bg-blue-600" />
+      <EventYear ui_id={EventId.PROTESTANT_REFORMATION} />
       <EventSpan ui_id={EventId.SCIENTIFIC_REVOLUTION} bgColorClass="bg-blue-600" />
       <EventSpan ui_id={EventId.INDUSTRIAL_REVOLUTION} bgColorClass="bg-blue-600" />
       <div className="bg-white/20 h-[18px]">
