@@ -32,7 +32,6 @@ const Sidebar = () => {
   let filtersJSX
   let eventYearJSX
   let eventSpanJSX
-  console.log('type', type)
   if (type === EventType.PEOPLE_LIST) {
     // @ts-ignore
     const region = data.region || null
@@ -40,8 +39,6 @@ const Sidebar = () => {
     const field = data.field || null
     // @ts-ignore
     const gender = data.gender || null
-    console.log('data', data)
-    console.log('field', field)
     filtersJSX =
       region || field || gender ? (
         <div className="flex gap-2">
@@ -57,13 +54,10 @@ const Sidebar = () => {
   if (type === EventType.EVENT_YEAR) {
     // @ts-ignore
     eventYearToDisplay = data
-    console.log('eventYearToDisplay', eventYearToDisplay)
     // @ts-ignore
     const year = eventYearToDisplay.year
     // @ts-ignore
     const name = eventYearToDisplay.name
-    console.log('name', name)
-    console.log('year', year)
     eventYearJSX = eventYearToDisplay ? (
       <div>
         <p className="text-white">{year}</p>

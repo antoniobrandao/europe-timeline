@@ -8,7 +8,7 @@ export const notableSpanEvents: EventSpanType[] = [
     id: EventId.CHRISTIAN_DOMINATION_INSTITUTIONS,
     name: 'Christian Domination of Institutions',
     start: 400,
-    end: 1700,
+    end: 1600,
     description: [
       `During this period the Chrisitian religion held complete domination of the European governments`,
       `Kings required their blessing to be appointed, and could be deposed without it`,
@@ -60,7 +60,7 @@ export const notableSpanEvents: EventSpanType[] = [
     end: 180,
     link: 'https://en.wikipedia.org/wiki/Roman_Empire',
     description: [
-      `The Pax Romana (Latin for "Roman peace") is a roughly 200-year-long period of Roman history which is identified as a ,
+      `The Pax Romana (Latin for "Roman peace") is a roughly 200-year-long period of Roman history which is identified as a
       golden age of increased and sustained Roman imperialism, relative peace and order, 
       prosperous stability, hegemonic power, and regional expansion.`,
     ],
@@ -72,12 +72,12 @@ export const notableSpanEvents: EventSpanType[] = [
     end: 397,
     link: 'https://en.wikipedia.org/wiki/Ambrose',
     description: [
-      `Ambrose was serving as the Roman governor of Aemilia-Liguria in Milan when he was unexpectedly made Bishop of Milan in 374 by popular acclamation.`,
+      `Ambrose is the person who made the Christian Church more powerful than the Roman emperor himself. With his actions, he made the Christian Church powerful enough to take over all the institutions and ban all other views / faiths / practices.`,
+      `Ambrose was a rich man, not a priest. Serving as the Roman governor of Aemilia-Liguria in Milan, when he was unexpectedly made Bishop of Milan in 374 by acclamation of a mob of peasants.`,
       `A staunch Nicean Christian, Ambrose was extremely intolerant of other faiths.`,
       `He promoted persecution of pagans and non-Nicean Christians.`,
-      `He convinced emperor Gratian to abolish the office of Pontifex Maximus, and persuaded emperor Theodosius to remove the Altar of Victory.`,
-      `He also guilt-tripped emperor Theodosius into doing a humiliating public atonement for the sin of punishing a mutinous crowd.`,
-      `Above all, he is the person who made the Christian Church more powerful than the Roman emperor himself.`,
+      `He famously guilt-tripped the Roman Emperor Theodosius into performing a long humiliating public atonement for the "sin" of punishing a mutinous crowd.`,
+      `He is also famous for convincing the Emperor Gratian to abolish the office of Pontifex Maximus (which the Church later co-opted for itself), and for persuading emperor Theodosius to remove the Altar of Victory, the symbol of Rome's military success, from the Senate.`,
     ],
   },
   {
@@ -248,12 +248,12 @@ export const notableYearEvents: EventYearType[] = [
     link: 'https://en.wikipedia.org/wiki/Gemistos_Plethon',
     year: 1438,
     description: [
-      `The man responsible for reintroducing Plato's ideas to Western Europe, and a major influence on the Italian Renaissance`,
+      `The man responsible for reintroducing Plato's ideas to Western Europe, and a major influence on the Italian Renaissance, if not literally it's Prophet.`,
       `Known as one of the most renowned philosophers of the late Byzantine era, he travelled to Florence in Italy in 1438–1439 to 
       attend the Council of Florence to discuss a union of the Orthodox and Catholic churches.`,
-      `Despite not being a theologian, Plethon was chosen to accompany the Byzantine
+      `Despite not being a theologian or even Christian, Plethon was chosen to accompany the Byzantine
       emperor John VIII Palaiologos to the Council on the basis of his renowned wisdom and morality.`,
-      `In Florence, Plethon met Cosimo de' Medici, whom he influenced to found a new Platonic Academy, which, 
+      `In Florence, Plethon met Cosimo de' Medici, whom he influenced to found a new Platonic Academy (in other words, ressuscitating the Academy of Athens which had been closed by the Christian Emperor Justinian I in 529 CE), which, 
       under Marsilio Ficino, proceeded to translate into Latin all of Plato's works, the Enneads of 
       Plotinus, and various other Neoplatonist works.`,
       `At the invitation of some Florentine humanists he set up a temporary school to lecture

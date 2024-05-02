@@ -90,7 +90,6 @@ const AmountSpanCanvas = (props: AmountSpanCanvasProps) => {
           gender: filterGender
         },
       }
-      console.log('content', content)
       setDisplayContent(content)
     }
   }

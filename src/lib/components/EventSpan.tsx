@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useRef } from 'react'
 import clsx from 'clsx'
 import type { DisplayContentType, EventSpanType } from '@/lib/constants/types'
 import { EventType } from '@/lib/constants/enums'
@@ -16,6 +16,7 @@ type EventSpanProps = {
 const EventSpan = (props: EventSpanProps) => {
   const { locked, displayContent, setDisplayContent } = React.useContext(DataContext)
   const { ui_id, bgColorClass } = props
+  const eventSpanElRef = useRef()
   // @ts-ignore
   const eventData: EventSpanType = notableSpanEvents.find(
     (event: EventSpanType) => event.id === ui_id,
@@ -23,12 +24,6 @@ const EventSpan = (props: EventSpanProps) => {
 
   const startPercent = getYearPercentualPosition(eventData.start)
   const endPercent = getYearPercentualPosition(eventData.end)
-
-  // const displayContentFormat: DisplayContentType = {
-  //   ui_id: ui_id,
-  //   type: 'event_span',
-  //   eventData: eventData,
-  // }
 
   // @ts-ignore
   // const selected = ui_id && displayContent.ui_id && displayContent.ui_id === ui_id
@@ -42,7 +37,8 @@ const EventSpan = (props: EventSpanProps) => {
     if(!locked) {
       const content: DisplayContentType = {
         data: eventData,
-        type: EventType.EVENT_SPAN
+        type: EventType.EVENT_SPAN,
+        ref: eventSpanElRef
       }
       setDisplayContent(content)
     }
@@ -51,6 +47,8 @@ const EventSpan = (props: EventSpanProps) => {
   return (
     <div className={rootStyle} onMouseOver={handleHover}>
       <div
+        // @ts-ignore
+        ref={eventSpanElRef}
         className={clsx('!h-[13px] absolute top-0', bgColorClass)}
         style={{ left: `${startPercent}%`, width: `${endPercent - startPercent}%` }}
       ></div>

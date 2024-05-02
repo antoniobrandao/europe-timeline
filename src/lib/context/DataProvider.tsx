@@ -21,11 +21,6 @@ const DataProvider: FC<{ children: ReactNode }> = ({ children }) => {
     setYear(year)
   }
 
-  // const handleSetLockedDocument = (newDocument: any) => {
-  //   console.log('handleSetLockedDocument : newDocument', newDocument)
-  //   setLockedDocument(newDocument)
-  // }
-
   const handleSetXCoord = (newX: number) => {
     setXCoord(newX)
     if (!locked) {
@@ -41,7 +36,6 @@ const DataProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const handleSetDisplayContent = (data: DisplayContentType) => {
     if (locked) return
     setDisplayContent(data)
-    console.log('data', data)
   }
   
   const handleSetLocked = (newState: boolean) => {
@@ -56,12 +50,10 @@ const DataProvider: FC<{ children: ReactNode }> = ({ children }) => {
       // @ts-ignore
       if(!yearValue && eventData && eventData.start) yearValue = eventData.start
       if(eventData && yearValue) {
-        console.log('OHS DOIFH OSDIFJDS')
         const timelineElement = document.getElementById('timelines-element')
         // @ts-ignore
         const timelineElementWidth = timelineElement.clientWidth
         const percentualPosition = getYearPercentualPosition(yearValue)
-        console.log('percentualPosition', percentualPosition)
         const newPosition = percentualPosition * timelineElementWidth / 100
         setLockedX(newPosition)
       }
