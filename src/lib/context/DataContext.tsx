@@ -11,13 +11,15 @@ const defaultValue = {
   setXCoord: (newState: number) => {},
   year: 0,
   handleSetYear: (newYear: number) => {},
+  // lockedDocument: null,
+  // handleSetLockedDocument: (newDocument: any) => {},
   westernPhilosophers: westernPhilosophers,
   mainStatusDisplay: '',
   setMainStatusDisplay: (newString: string) => {},
-  philosophersToDisplay: [],
-  setPhilosophersToDisplay: (jsx: any) => {},
-  displayContent: { type: 'none' },
-  setDisplayContent: (data: DisplayContentType) => {},
+  // philosophersToDisplay: [],
+  // setPhilosophersToDisplay: (jsx: any) => {},
+  displayContent: null,
+  setDisplayContent: (newDisplayContent: DisplayContentType) => {},
 }
 
 const DataContext = createContext(defaultValue)

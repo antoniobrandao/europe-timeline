@@ -1,23 +1,28 @@
 export enum Fields {
-  SCIENCE = 'SCIENCE',
-  MIND = 'PHILOSOPHY',
-  SPIRITUALITY = 'SPIRITUALITY',
-  THEOLOGY = 'THEOLOGY',
-  HISTORY = 'HISTORY',
-  METAPHYSICS = 'METAPHYSICS',
-  MUSIC = 'MUSIC',
-  POLITICS = 'POLITICS',
+  SCIENCE = 'Science',
+  MIND = 'Philosophy',
+  SPIRITUALITY = 'Spirituality',
+  THEOLOGY = 'Theology',
+  HISTORY = 'History',
+  METAPHYSICS = 'Metaphysics',
+  MUSIC = 'Music',
+  POLITICS = 'Politics',
 }
 
 export enum Region {
-  EUROPE = 'EUROPE',
-  MIDDLE_EAST = 'MIDDLE_EAST',
-  AFRICA = 'AFRICA',
-  NORTH_AMERICA = 'NORTH_AMERICA',
+  EUROPE = 'Europe',
+  MIDDLE_EAST = 'Middle East',
 }
+
 export enum Gender {
   MALE = 'MALE',
   FEMALE = 'FEMALE',
+}
+
+export enum EventType {
+  EVENT_SPAN = 'EVENT_SPAN',
+  EVENT_YEAR = 'EVENT_YEAR',
+  PEOPLE_LIST = 'PEOPLE_LIST',
 }
 
 export enum EventId {

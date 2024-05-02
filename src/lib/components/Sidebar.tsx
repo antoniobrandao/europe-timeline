@@ -2,6 +2,8 @@
 
 import React from 'react'
 import DataContext from '@/lib/context/DataContext'
+import { EventType } from '@/lib/constants/enums'
+import { DisplayContentType } from '@/lib/constants/types'
 import PeopleDisplay from '@/lib/components/PeopleDisplay'
 import { getFieldTextColor } from '@/lib/ui_helpers'
 import clsx from 'clsx'
@@ -14,62 +16,109 @@ const Sidebar = () => {
   let descriptionToDisplay
   let linkToDisplay
 
-  // @ts-ignore
-  const region = displayContent.region || null
-  // @ts-ignore
-  const field = displayContent.field || null
-  // @ts-ignore
-  const gender = displayContent.gender || null
-  // @ts-ignore
-  const type = displayContent.type || null
+  const dc: DisplayContentType | null = displayContent
 
-  if (displayContent && type === 'people_list') {
-    let people = westernPhilosophers
-    people = people.filter(philosopher => philosopher.birth <= year && philosopher.death >= year)
-    if (region) {
-      people = people.filter(person => person.region === region)
-    }
-    if (field) {
-      people = people.filter(person => person.fields.indexOf(field) > -1)
-    }
-    if (gender) {
-      people = people.filter(person => person.gender === gender)
-    }
-    philosophersToDisplay = people
-  }
-
+  if (!dc) return null
   // @ts-ignore
-  if (displayContent && type === 'event_year') {
+  const data = dc.data
+  // @ts-ignore
+  const type = dc.type
+  if (!data) return null
+  // @ts-ignore
+  const description = data.description
+  // @ts-ignore
+  const link = data.link
+
+  let filtersJSX
+  let eventYearJSX
+  let eventSpanJSX
+  console.log('type', type)
+  if (type === EventType.PEOPLE_LIST) {
     // @ts-ignore
-    eventYearToDisplay = displayContent.eventData
-  }
-
-  // @ts-ignore
-  if (displayContent && type === 'event_span') {
+    const region = data.region || null
     // @ts-ignore
-    eventSpanToDisplay = displayContent.eventData
+    const field = data.field || null
+    // @ts-ignore
+    const gender = data.gender || null
+    console.log('data', data)
+    console.log('field', field)
+    filtersJSX =
+      region || field || gender ? (
+        <div className="flex gap-2">
+          {region && <p className="text-sm text-white">{region}</p>}
+          {field && <p className={clsx('text-sm', getFieldTextColor(field))}>{field}</p>}
+          {!field && <p className="text-sm text-white/40">(all fields)</p>}
+          {gender && <p className="text-sm text-white/70">{`(${gender.toLowerCase()} only)`}</p>}
+          {!region && <p className="text-sm text-white/40">(ALL REGIONS)</p>}
+        </div>
+      ) : null
   }
 
-  // @ts-ignore
-  if (displayContent && displayContent.eventData && displayContent.eventData.link) {
+  if (type === EventType.EVENT_YEAR) {
+    // @ts-ignore
+    eventYearToDisplay = data
+    console.log('eventYearToDisplay', eventYearToDisplay)
+    // @ts-ignore
+    const year = eventYearToDisplay.year
+    // @ts-ignore
+    const name = eventYearToDisplay.name
+    console.log('name', name)
+    console.log('year', year)
+    eventYearJSX = eventYearToDisplay ? (
+      <div>
+        <p className="text-white">{year}</p>
+        <p className="text-white">{name}</p>
+      </div>
+    ) : null
+  }
+
+  if (type === EventType.EVENT_SPAN) {
+    // @ts-ignore
+    eventSpanToDisplay = data
+    // @ts-ignore
+    const start = eventSpanToDisplay.start
+    // @ts-ignore
+    const end = eventSpanToDisplay.end
+    // @ts-ignore
+    const name = eventSpanToDisplay.name
+    eventSpanJSX = eventSpanToDisplay ? (
+      <div>
+        <p className="text-white">
+          {start} to {end}
+        </p>
+        <p className="text-white">{name}</p>
+      </div>
+    ) : null
+  }
+
+  if (link) {
     linkToDisplay = (
       // @ts-ignore
-      <a href={displayContent.eventData.link} target="_blank" className='block bg-[#1f1f1f] rounded-[4px] border border-[#333] p-2 hover:bg-[#333] hover:border-[#999] transition-colors duration-300 text-sm text-center'>
+      <a
+        href={data.link}
+        target="_blank"
+        className="block bg-[#1f1f1f] rounded-[4px] border border-[#333] p-2 hover:bg-[#333] hover:border-[#999] transition-colors duration-300 text-sm text-center"
+      >
         MORE INFO
       </a>
     )
   }
 
   // @ts-ignore
-  if (displayContent.eventData && displayContent.eventData.description) {
+  if (data.description) {
     // @ts-ignore
-    const desc = displayContent.eventData.description
+    const desc = data.description
 
     if (desc.length && desc.map) {
       descriptionToDisplay = (
         <div>
           {desc.map((desc: string, index: number) => (
-            <p key={desc.charAt(0) ? desc.charAt(0) + index : index} className="text-sm leading-[150%] text-[#999] mb-3">{desc}</p>
+            <p
+              key={desc.charAt(0) ? desc.charAt(0) + index : index}
+              className="text-sm leading-[150%] text-[#999] mb-3"
+            >
+              {desc}
+            </p>
           ))}
         </div>
       )
@@ -80,32 +129,15 @@ const Sidebar = () => {
 
   return (
     <div
-      id='sidebar'
+      id="sidebar"
       style={{ height: 'calc(100vh - 28px)' }}
       className="w-full relative top-[28px] border-l border-white/10 m-0 bg-[#171717] col-span-3 p-4 flex flex-col gap-4 overflow-auto"
     >
       <div className="flex flex-col gap-2">
-        {region && (
-          <div className="flex gap-2">
-            <p className="text-sm text-white">{region}</p>
-            {field && <p className={clsx('text-sm', getFieldTextColor(field))}>({field})</p>}
-          </div>
-        )}
-        {philosophersToDisplay && <PeopleDisplay philosophersToDisplay={philosophersToDisplay} />}
-        {eventYearToDisplay && (
-          <div>
-            <p className="text-white">{eventYearToDisplay.year}</p>
-            <p className="text-white">{eventYearToDisplay.name}</p>
-          </div>
-        )}
-        {eventSpanToDisplay && (
-          <div>
-            <p className="text-white">
-              {eventSpanToDisplay.start} to {eventSpanToDisplay.end}
-            </p>
-            <p className="text-white">{eventSpanToDisplay.name}</p>
-          </div>
-        )}
+        {filtersJSX}
+        {eventYearJSX}
+        {eventSpanJSX}
+        {data.people && <PeopleDisplay philosophersToDisplay={data.people} />}
         {descriptionToDisplay}
         {linkToDisplay}
       </div>

@@ -1,12 +1,13 @@
-import { Fields, Region, Gender, EventId } from '@/lib/constants/enums'
+import { Fields, Region, Gender, EventId, EventType } from '@/lib/constants/enums'
 
 export type DisplayContentType = {
-  type: string
-  ui_id?: string
-  field?: Fields
-  region?: Region
-  gender?: Gender
-  eventData?: any
+  data: PhilosopherType[] | EventSpanType | EventYearType | any
+  type: EventType | null
+  // ui_id?: string
+  // field?: Fields
+  // region?: Region
+  // gender?: Gender
+  // eventData?: any
 }
 
 export type PhilosopherType = {

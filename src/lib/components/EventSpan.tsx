@@ -2,7 +2,8 @@
 
 import React from 'react'
 import clsx from 'clsx'
-import { DisplayContentType, EventSpanType } from '@/lib/constants/types'
+import type { DisplayContentType, EventSpanType } from '@/lib/constants/types'
+import { EventType } from '@/lib/constants/enums'
 import DataContext from '@/lib/context/DataContext'
 import { notableSpanEvents  } from '@/lib/data/events'
 import { getYearPercentualPosition } from '@/lib/data/time'
@@ -13,7 +14,7 @@ type EventSpanProps = {
 }
 
 const EventSpan = (props: EventSpanProps) => {
-  const { setDisplayContent, displayContent } = React.useContext(DataContext)
+  const { locked, displayContent, setDisplayContent } = React.useContext(DataContext)
   const { ui_id, bgColorClass } = props
   // @ts-ignore
   const eventData: EventSpanType = notableSpanEvents.find(
@@ -23,21 +24,32 @@ const EventSpan = (props: EventSpanProps) => {
   const startPercent = getYearPercentualPosition(eventData.start)
   const endPercent = getYearPercentualPosition(eventData.end)
 
-  const displayContentFormat: DisplayContentType = {
-    ui_id: ui_id,
-    type: 'event_span',
-    eventData: eventData,
-  }
+  // const displayContentFormat: DisplayContentType = {
+  //   ui_id: ui_id,
+  //   type: 'event_span',
+  //   eventData: eventData,
+  // }
 
   // @ts-ignore
-  const selected = ui_id && displayContent.ui_id && displayContent.ui_id === ui_id
+  // const selected = ui_id && displayContent.ui_id && displayContent.ui_id === ui_id
+  const selected = displayContent && displayContent.data && displayContent.data.name && displayContent.data.name === eventData.name
   const rootStyle = clsx(
-    'flex w-full !h-[13px] overflow-hidden relative bg-white/10 mb-1',
+    'flex w-full !h-[13px] overflow-hidden relative bg-white/10 mb-0.5',
     selected ? 'bg-white/30' : '',
   )
 
+  const handleHover = () => {
+    if(!locked) {
+      const content: DisplayContentType = {
+        data: eventData,
+        type: EventType.EVENT_SPAN
+      }
+      setDisplayContent(content)
+    }
+  }
+
   return (
-    <div className={rootStyle} onMouseOver={() => setDisplayContent(displayContentFormat)}>
+    <div className={rootStyle} onMouseOver={handleHover}>
       <div
         className={clsx('!h-[13px] absolute top-0', bgColorClass)}
         style={{ left: `${startPercent}%`, width: `${endPercent - startPercent}%` }}

@@ -5,15 +5,15 @@ import { useState, FC, ReactNode } from 'react'
 import DataContext from './DataContext'
 import { getYearPercentualPosition, getYearFromPercentage } from '@/lib/data/time'
 import { westernPhilosophers } from '@/lib/data/people'
-import { DisplayContentType } from '@/lib/constants/types'
+import { PhilosopherType, DisplayContentType } from '@/lib/constants/types'
 
 const DataProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const [mainStatusDisplay, setMainStatusDisplay] = useState<string>('')
   const [locked, setLocked] = useState<boolean>(false)
   const [lockedX, setLockedX] = useState<number>(0)
   const [xCoord, setXCoord] = useState(0)
-  const [displayContent, setDisplayContent] = useState<DisplayContentType>({ type: 'none' })
-  const [philosophersToDisplay, setPhilosophersToDisplay] = useState<any>(null)
+  const [displayContent, setDisplayContent] = useState<DisplayContentType | null | undefined>(null)
+  const [philosophersToDisplay, setPhilosophersToDisplay] = useState<PhilosopherType[] | any>(null)
   const [year, setYear] = useState<number>(0)
 
   const handleSetYear = (year: number) => {
@@ -21,18 +21,25 @@ const DataProvider: FC<{ children: ReactNode }> = ({ children }) => {
     setYear(year)
   }
 
+  // const handleSetLockedDocument = (newDocument: any) => {
+  //   console.log('handleSetLockedDocument : newDocument', newDocument)
+  //   setLockedDocument(newDocument)
+  // }
+
   const handleSetXCoord = (newX: number) => {
     setXCoord(newX)
     if (!locked) {
       // @ts-ignore
-      const percentage = newX / (window.innerWidth - document.getElementById('sidebar').clientWidth)
+      const sidebarElement = document.getElementById('sidebar')
+      if(!sidebarElement) return
+      const percentage = newX / (window.innerWidth - sidebarElement.clientWidth)
       const year = getYearFromPercentage(percentage)
       handleSetYear(year)
     }
   }
 
   const handleSetDisplayContent = (data: DisplayContentType) => {
-    // if (locked) return
+    if (locked) return
     setDisplayContent(data)
     console.log('data', data)
   }
@@ -40,9 +47,13 @@ const DataProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const handleSetLocked = (newState: boolean) => {
     if (newState === true) {
       setLockedX(xCoord)
-      const eventData: any = displayContent.eventData
+      // @ts-ignore
+      const dc: DisplayContentType = displayContent
+      const eventData = dc.data
       let yearValue
+      // @ts-ignore
       if(eventData && eventData.year) yearValue = eventData.year
+      // @ts-ignore
       if(!yearValue && eventData && eventData.start) yearValue = eventData.start
       if(eventData && yearValue) {
         console.log('OHS DOIFH OSDIFJDS')
@@ -74,6 +85,7 @@ const DataProvider: FC<{ children: ReactNode }> = ({ children }) => {
         setMainStatusDisplay: setMainStatusDisplay,
         philosophersToDisplay: philosophersToDisplay,
         setPhilosophersToDisplay: setPhilosophersToDisplay,
+        // @ts-ignore
         displayContent: displayContent,
         setDisplayContent: handleSetDisplayContent,
       }}

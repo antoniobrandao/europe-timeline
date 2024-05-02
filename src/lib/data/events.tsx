@@ -1,6 +1,8 @@
 import { EventSpanType, EventYearType } from '@/lib/constants/types'
 import { EventId } from '@/lib/constants/enums'
 
+// MARK: SPAN EVENTS
+
 export const notableSpanEvents: EventSpanType[] = [
   {
     id: EventId.CHRISTIAN_DOMINATION_INSTITUTIONS,
@@ -180,6 +182,8 @@ export const notableSpanEvents: EventSpanType[] = [
     ],
   },
 ]
+
+// MARK: YEAR EVENTS
 
 export const notableYearEvents: EventYearType[] = [
   {
