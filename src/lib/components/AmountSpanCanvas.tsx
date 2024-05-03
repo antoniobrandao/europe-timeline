@@ -60,11 +60,9 @@ const AmountSpanCanvas = (props: AmountSpanCanvasProps) => {
   const selected =
     displayContent &&
     // @ts-ignore
-    displayContent.data &&
+    displayContent.type === EventType.PEOPLE_LIST &&
     // @ts-ignore
-    displayContent.data.title &&
-    // @ts-ignore
-    displayContent.data.title === title
+    displayContent.ui_id === ui_id
 
   const rootStyle = clsx('relative h-[80px]', selected ? 'bg-[#1a1a1a]' : 'bg-[#111]')
 
@@ -72,6 +70,7 @@ const AmountSpanCanvas = (props: AmountSpanCanvasProps) => {
     if (!locked) {
       const content: DisplayContentType = {
         type: EventType.PEOPLE_LIST,
+        ui_id: ui_id,
         data: {
           people: arrayToUse.filter(
             philosopher => philosopher.birth <= year && philosopher.death >= year,

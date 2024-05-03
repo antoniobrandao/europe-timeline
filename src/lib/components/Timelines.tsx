@@ -23,32 +23,32 @@ const Timelines = () => {
       <div className="bg-white/20 h-[18px]">
         <p className="text-white text-[11px] pl-1 relative top-[1px]">NOTABLE EVENTS</p>
       </div>
-      <EventSpan ui_id={EventId.ROMAN_REPUBLIC} bgColorClass="bg-red-600" />
-      <EventSpan ui_id={EventId.ROMAN_EMPIRE} bgColorClass="bg-red-600" />
-      <EventSpan ui_id={EventId.PAX_ROMANA} bgColorClass="bg-red-600" />
+      <EventSpan ui_id={EventId.ROMAN_REPUBLIC} color="#dc2626" />
+      <EventSpan ui_id={EventId.ROMAN_EMPIRE} color="#dc2626" />
+      <EventSpan ui_id={EventId.PAX_ROMANA} color="#6d28d9" />
       <EventYear ui_id={EventId.CHRISTIANITY_APPEARS} />
       <EventYear ui_id={EventId.ROME_CONQUERS_JUDEA} />
       <EventYear ui_id={EventId.SECOND_TEMPLE_DESTROYED} />
-      <EventSpan ui_id={EventId.AMBROSE_OF_MILAN} bgColorClass="bg-red-600" />
+      <EventSpan ui_id={EventId.AMBROSE_OF_MILAN} color="#dc2626" />
       <EventYear ui_id={EventId.CHRISTIANITY_BECOMES_MANDATORY} />
       {/* <EventYear ui_id={EventId.CHRISTIANITY_MADE_OFFICAL_STATE_RELIGION} /> */}
       <EventYear ui_id={EventId.ALTAR_OF_VICTORY_REMOVED} />
       <EventYear ui_id={EventId.CHRISTIANITY_BANS_OLYMPIC_GAMES} />
-      <EventSpan ui_id={EventId.CHRISTIAN_DOMINATION_INSTITUTIONS} bgColorClass="bg-red-800" />
+      <EventSpan ui_id={EventId.CHRISTIAN_DOMINATION_INSTITUTIONS} color="#7f1d1d" />
       <EventYear ui_id={EventId.JUSTINIAN_CLOSES_ACADEMY_OF_ATHENS} />
-      <EventSpan ui_id={EventId.DARK_AGES} bgColorClass="bg-red-900" />
-      <EventSpan ui_id={EventId.ISLAMIC_GOLDEN_AGE} bgColorClass="bg-yellow-700" />
-      <EventSpan ui_id={EventId.CAROLOGIAN_RENAISSANCE} bgColorClass="bg-blue-600" />
-      <EventSpan ui_id={EventId.TWELVE_CENTURY_RENAISSANCE} bgColorClass="bg-blue-600" />
-      <EventSpan ui_id={EventId.CHRISTIAN_INQUISITION} bgColorClass="bg-red-900" />
-      <EventSpan ui_id={EventId.WITCH_HUNTS} bgColorClass="bg-red-900" />
+      <EventSpan ui_id={EventId.DARK_AGES} color="#7f1d1d" />
+      <EventSpan ui_id={EventId.ISLAMIC_GOLDEN_AGE} color="#a16207" />
+      <EventSpan ui_id={EventId.CAROLOGIAN_RENAISSANCE} color="#1d4ed8" />
+      <EventSpan ui_id={EventId.TWELVE_CENTURY_RENAISSANCE} color="#1d4ed8" />
+      <EventSpan ui_id={EventId.CHRISTIAN_INQUISITION} color="#7f1d1d" />
+      <EventSpan ui_id={EventId.WITCH_HUNTS} color="#7f1d1d" />
       <EventYear ui_id={EventId.PLETHON_VISITS_FLORENCE} />
       <EventYear ui_id={EventId.FALL_OF_CONSTANTINOPLE} />
       <EventYear ui_id={EventId.MEDICI_REOPENS_PLATONIC_ACADEMY} />
-      <EventSpan ui_id={EventId.ITALIAN_RENAISSANCE} bgColorClass="bg-blue-600" />
+      <EventSpan ui_id={EventId.ITALIAN_RENAISSANCE} color="#1d4ed8" />
       <EventYear ui_id={EventId.PROTESTANT_REFORMATION} />
-      <EventSpan ui_id={EventId.SCIENTIFIC_REVOLUTION} bgColorClass="bg-blue-600" />
-      <EventSpan ui_id={EventId.INDUSTRIAL_REVOLUTION} bgColorClass="bg-blue-600" />
+      <EventSpan ui_id={EventId.SCIENTIFIC_REVOLUTION} color="#15803d" />
+      <EventSpan ui_id={EventId.INDUSTRIAL_REVOLUTION} color="#0e7490" />
       <div className="bg-white/20 h-[18px]">
         <p className="text-white text-[11px] pl-1 relative top-[1px]">NOTABLE INTELLECTUALS - EUROPE</p>
       </div>

@@ -10,12 +10,12 @@ import { getYearPercentualPosition } from '@/lib/data/time'
 
 type EventSpanProps = {
   ui_id: string
-  bgColorClass: string
+  color: string
 }
 
 const EventSpan = (props: EventSpanProps) => {
   const { locked, displayContent, setDisplayContent } = React.useContext(DataContext)
-  const { ui_id, bgColorClass } = props
+  const { ui_id, color } = props
   const eventSpanElRef = useRef()
   // @ts-ignore
   const eventData: EventSpanType = notableSpanEvents.find(
@@ -38,7 +38,8 @@ const EventSpan = (props: EventSpanProps) => {
       const content: DisplayContentType = {
         data: eventData,
         type: EventType.EVENT_SPAN,
-        ref: eventSpanElRef
+        ref: eventSpanElRef,
+        color: color
       }
       setDisplayContent(content)
     }
@@ -49,8 +50,8 @@ const EventSpan = (props: EventSpanProps) => {
       <div
         // @ts-ignore
         ref={eventSpanElRef}
-        className={clsx('!h-[12px] absolute top-0', bgColorClass)}
-        style={{ left: `${startPercent}%`, width: `${endPercent - startPercent}%` }}
+        className={clsx('!h-[12px] absolute top-0')}
+        style={{ backgroundColor: color, left: `${startPercent}%`, width: `${endPercent - startPercent}%` }}
       ></div>
       <p className={clsx(selected ? 'text-white' : 'text-white/80', "text-[10px] pl-1 select-none absolute leading-none top-[1px] uppercase truncate")} style={{ left: `${startPercent}%` }}>
         {eventData.name}

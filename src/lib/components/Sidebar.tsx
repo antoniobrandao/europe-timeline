@@ -6,6 +6,7 @@ import { EventType } from '@/lib/constants/enums'
 import { DisplayContentType } from '@/lib/constants/types'
 import PeopleDisplay from '@/lib/components/PeopleDisplay'
 import { getFieldTextColor } from '@/lib/ui_helpers'
+import { yearDisplayFormatted } from '@/lib/ui_helpers'
 import clsx from 'clsx'
 
 const Sidebar = () => {
@@ -45,7 +46,7 @@ const Sidebar = () => {
           {region && <p className="text-sm text-white">{region}</p>}
           {field && <p className={clsx('text-sm', getFieldTextColor(field))}>{field}</p>}
           {!field && <p className="text-sm text-white/40">(all fields)</p>}
-          {gender && <p className="text-sm text-white/70">{`(${gender.toLowerCase()} only)`}</p>}
+          {gender && <p className="text-sm text-violet-400">{`(${gender.toLowerCase()} only)`}</p>}
           {!region && <p className="text-sm text-white/40">(ALL REGIONS)</p>}
         </div>
       ) : null
@@ -60,7 +61,7 @@ const Sidebar = () => {
     const name = eventYearToDisplay.name
     eventYearJSX = eventYearToDisplay ? (
       <div>
-        <p className="text-white">{year}</p>
+        <p className="text-white">{yearDisplayFormatted(year)}</p>
         <p className="text-white">{name}</p>
       </div>
     ) : null
@@ -78,7 +79,7 @@ const Sidebar = () => {
     eventSpanJSX = eventSpanToDisplay ? (
       <div>
         <p className="text-white">
-          {start} to {end}
+          {`${yearDisplayFormatted(start)} to ${yearDisplayFormatted(end)}`}
         </p>
         <p className="text-white">{name}</p>
       </div>

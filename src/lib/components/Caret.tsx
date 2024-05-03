@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import DataContext from '@/lib/context/DataContext'
 import { EventType } from '@/lib/constants/enums'
+import { postFix, yearDisplayFormatted } from '@/lib/ui_helpers'
 import clsx from 'clsx'
 
 const Caret = () => {
@@ -42,24 +43,22 @@ const Caret = () => {
     }
   }
 
-  const caretStyle = clsx('absolute h-screen top-0 z-50', locked ? 'bg-blue-500' : 'bg-white/30')
-  const textStyleYear = clsx('text-sm', locked ? 'text-blue-500' : 'text-white')
-  const textStyle = 'text-xs text-white/50 relative top-[3px] animate-pulse'
+  const caretStyle = clsx('absolute h-screen top-0 z-50')
+  let caretColor = locked ? '#ffffff' : 'rgba(255,255,255,0.3)'
+  let textColor = '#ffffff'
+  const textStyleYear = 'text-sm'
+  const textStyleLock = 'text-xs text-white/50 relative top-[3px] animate-pulse'
 
-  const postFix = (givenYear: number) => {
-    if(givenYear < 0) { return 'BCE'}
-    else { return 'CE'}
-  }
   let textLeft = ''
   let textRight = ''
   // @ts-ignore
   if(!locked) {
-    textLeft = `${year} ${postFix(year)}`
+    textLeft = yearDisplayFormatted(year)
     textRight = ''
   }
   // @ts-ignore
   else if(locked && displayContent && displayContent.type === EventType.PEOPLE_LIST) {
-    textLeft = `${year} ${postFix(year)}`
+    textLeft = yearDisplayFormatted(year)
     textRight = ''
   }
   // @ts-ignore
@@ -68,8 +67,12 @@ const Caret = () => {
     const start: number = displayContent.data.start
     // @ts-ignore
     const end: number = displayContent.data.end
-    textLeft = `${start} ${postFix(start)}`
-    textRight = `${end} ${postFix(end)}`
+    // @ts-ignore
+    caretColor = displayContent.color
+    // @ts-ignore
+    textColor = displayContent.color
+    textLeft = yearDisplayFormatted(year)
+    textRight = yearDisplayFormatted(end)
   }
   // @ts-ignore
   else if(locked && displayContent && displayContent.type === EventType.EVENT_YEAR) {
@@ -82,14 +85,15 @@ const Caret = () => {
     <div className="w-full fixed z-50 pointer-events-none">
       <div className="fixed w-full text-white top-0 left-0 bg-black h-[28px] z-40 border-b border-[#333]">
         <div className="flex gap-2 absolute top-[3px]" style={{ left: `${xToUse + 8}px` }}>
-          <p className={textStyleYear}>{textLeft} {textRight !== '' ? `to ${textRight}` : ''}</p>
-          {!lockedFirstTime && <p className={textStyle}>(click to lock year)</p>}
-          {locked && !unlockedFirstTime && <p className={textStyle}>(click to unlock)</p>}
+          <p className={textStyleYear} style={{color: textColor}}>{textLeft} {textRight !== '' ? `to ${textRight}` : ''}</p>
+          {!lockedFirstTime && <p className={textStyleLock}>(click to lock year)</p>}
+          {locked && !unlockedFirstTime && <p className={textStyleLock}>(click to unlock)</p>}
         </div>
       </div>
       <div
         className={caretStyle}
         style={{
+          background: caretColor,
           left: `${xToUse}px`,
           width: `${caretWidth}px`,
           opacity: caretWidth > 1 ? '0.2' : '1',

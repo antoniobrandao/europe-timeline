@@ -18,3 +18,15 @@ export const getFieldTextColor = (field: Fields) => {
         return 'text-red-500'
     }
   }
+
+  export const postFix = (givenYear: number) => {
+    if(givenYear < 0) { return 'BCE'}
+    else { return 'CE'}
+  }
+  
+  export const yearDisplayFormatted = (givenYear: number) => {
+    const isNegative = givenYear < 0
+    const baseYearString = isNegative ? -givenYear : givenYear
+    if(isNegative) { return  baseYearString + ' BCE'}
+    return  baseYearString + ' CE'
+  }

@@ -4,7 +4,8 @@ export type DisplayContentType = {
   data: PhilosopherType[] | EventSpanType | EventYearType | any
   type: EventType | null
   ref?: any
-  // ui_id?: string
+  color?: string
+  ui_id?: string
   // field?: Fields
   // region?: Region
   // gender?: Gender
