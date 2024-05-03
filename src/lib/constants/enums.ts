@@ -14,6 +14,14 @@ export enum Region {
   MIDDLE_EAST = 'Middle East',
 }
 
+export enum Religion {
+  POLYTHEIST = 'Polytheist',
+  CHRISTIAN = 'Christian',
+  MUSLIM = 'Muslim',
+  JEWISH = 'Jewish',
+  ATHEIST = 'Atheist',
+}
+
 export enum Gender {
   MALE = 'MALE',
   FEMALE = 'FEMALE',

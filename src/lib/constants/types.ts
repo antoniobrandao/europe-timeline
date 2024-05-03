@@ -1,4 +1,4 @@
-import { Fields, Region, Gender, EventId, EventType } from '@/lib/constants/enums'
+import { Fields, Region, Gender, EventId, EventType, Religion } from '@/lib/constants/enums'
 
 export type DisplayContentType = {
   data: PhilosopherType[] | EventSpanType | EventYearType | any
@@ -6,10 +6,6 @@ export type DisplayContentType = {
   ref?: any
   color?: string
   ui_id?: string
-  // field?: Fields
-  // region?: Region
-  // gender?: Gender
-  // eventData?: any
 }
 
 export type PhilosopherType = {
@@ -18,10 +14,7 @@ export type PhilosopherType = {
   birth: number
   death: number
   description: string | string[]
-  polytheist: boolean
-  christian: boolean
-  muslim: boolean
-  jewish: boolean
+  religion: Religion
   period: string
   region: Region
   fields: Fields[]

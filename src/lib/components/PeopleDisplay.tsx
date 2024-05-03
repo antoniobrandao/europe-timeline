@@ -1,7 +1,7 @@
 'use client'
 
 import { PhilosopherType } from '@/lib/constants/types'
-import { Fields } from '@/lib/constants/enums'
+import { Fields, Religion } from '@/lib/constants/enums'
 import { getFieldTextColor } from '@/lib/ui_helpers'
 import React from 'react'
 import clsx from 'clsx'
@@ -31,6 +31,20 @@ const PeopleDisplay = (props: PeopleDisplayProps) => {
         ) : (
           <p className={descriptionStyle}>{description}</p>
         )
+        const getReligionTextColor = (religion: Religion) => {
+          switch (religion) {
+            case Religion.POLYTHEIST:
+              return 'text-blue-300'
+            case Religion.CHRISTIAN:
+              return 'text-orange-300'
+            case Religion.JEWISH:
+              return 'text-purple-300'
+            case Religion.MUSLIM:
+              return 'text-green-300'
+            case Religion.ATHEIST:
+              return 'text-white'
+          }
+        }
         return (
           <a
             href={philosopher.wikipediaUrl}
@@ -42,10 +56,11 @@ const PeopleDisplay = (props: PeopleDisplayProps) => {
               <p className="text-xs leading-none">
                 {philosopher.name} ({philosopher.birth} to {philosopher.death})
               </p>
-              {philosopher.polytheist && <p className="leading-none text-xs text-blue-300">Polytheist</p>}
-              {philosopher.christian && <p className="leading-none text-xs text-orange-300">Christian</p>}
-              {philosopher.jewish && <p className="leading-none text-xs text-purple-300">Jewish</p>}
-              {philosopher.muslim && <p className="leading-none text-xs text-green-300">Muslim</p>}
+              <p
+                className={clsx('leading-none text-xs', getReligionTextColor(philosopher.religion))}
+              >
+                {philosopher.religion}
+              </p>
             </div>
 
             <div className="flex gap-1">

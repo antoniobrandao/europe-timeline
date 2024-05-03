@@ -26,7 +26,7 @@ const DataProvider: FC<{ children: ReactNode }> = ({ children }) => {
     if (!locked) {
       // @ts-ignore
       const sidebarElement = document.getElementById('sidebar')
-      if(!sidebarElement) return
+      if (!sidebarElement) return
       const percentage = newX / (window.innerWidth - sidebarElement.clientWidth)
       const year = getYearFromPercentage(percentage)
       handleSetYear(year)
@@ -37,7 +37,7 @@ const DataProvider: FC<{ children: ReactNode }> = ({ children }) => {
     if (locked) return
     setDisplayContent(data)
   }
-  
+
   const handleSetLocked = (newState: boolean) => {
     if (newState === true) {
       setLockedX(xCoord)
@@ -46,15 +46,15 @@ const DataProvider: FC<{ children: ReactNode }> = ({ children }) => {
       const eventData = dc.data
       let yearValue
       // @ts-ignore
-      if(eventData && eventData.year) yearValue = eventData.year
+      if (eventData && eventData.year) yearValue = eventData.year
       // @ts-ignore
-      if(!yearValue && eventData && eventData.start) yearValue = eventData.start
-      if(eventData && yearValue) {
+      if (!yearValue && eventData && eventData.start) yearValue = eventData.start
+      if (eventData && yearValue) {
         const timelineElement = document.getElementById('timelines-element')
         // @ts-ignore
         const timelineElementWidth = timelineElement.clientWidth
         const percentualPosition = getYearPercentualPosition(yearValue)
-        const newPosition = percentualPosition * timelineElementWidth / 100
+        const newPosition = (percentualPosition * timelineElementWidth) / 100
         setLockedX(newPosition)
       }
     }
