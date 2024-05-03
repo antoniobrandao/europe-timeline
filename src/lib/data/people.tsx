@@ -1183,7 +1183,7 @@ export const westernPhilosophers: PhilosopherType[] = [
     gender: Gender.MALE,
     birth: 121,
     death: 180,
-    description: 'Stoic.',
+    description: 'Stoic Philosopher Roman Emperor',
     religion: Religion.POLYTHEIST,
     period: 'Classical Rome',
     region: Region.EUROPE,

@@ -2,7 +2,7 @@
 
 import { PhilosopherType } from '@/lib/constants/types'
 import { Fields, Religion } from '@/lib/constants/enums'
-import { getFieldTextColor } from '@/lib/ui_helpers'
+import { getFieldTextColor, yearDisplayFormatted } from '@/lib/ui_helpers'
 import React from 'react'
 import clsx from 'clsx'
 
@@ -54,7 +54,7 @@ const PeopleDisplay = (props: PeopleDisplayProps) => {
           >
             <div className="w-full flex justify-between">
               <p className="text-xs leading-none">
-                {philosopher.name} ({philosopher.birth} to {philosopher.death})
+                {philosopher.name} <span className='opacity-50'>({yearDisplayFormatted(philosopher.birth)} to {yearDisplayFormatted(philosopher.death)})</span>
               </p>
               <p
                 className={clsx('leading-none text-xs', getReligionTextColor(philosopher.religion))}
