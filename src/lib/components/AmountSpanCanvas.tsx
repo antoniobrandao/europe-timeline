@@ -3,7 +3,7 @@
 import React, { useEffect, useState, useRef } from 'react'
 import DataContext from '@/lib/context/DataContext'
 import { years, totalYears } from '@/lib/data/time'
-import { Fields, Region, Gender, EventType } from '@/lib/constants/enums'
+import { Fields, Region, Gender, Religion, EventType } from '@/lib/constants/enums'
 import { DisplayContentType } from '@/lib/constants/types'
 import clsx from 'clsx'
 
@@ -13,13 +13,14 @@ type AmountSpanCanvasProps = {
   filterRegion?: Region
   filterField?: Fields
   filterGender?: Gender
+  filterReligion?: Religion
   color?: string
 }
 
 const totalHeight = 80
 
 const AmountSpanCanvas = (props: AmountSpanCanvasProps) => {
-  const { ui_id, title, filterRegion, filterField, filterGender } = props
+  const { ui_id, title, filterRegion, filterField, filterGender, filterReligion } = props
   let { color } = props
   const { year, locked, westernPhilosophers, displayContent, setDisplayContent } =
     React.useContext(DataContext)
@@ -35,6 +36,9 @@ const AmountSpanCanvas = (props: AmountSpanCanvasProps) => {
   }
   if (filterGender) {
     arrayToUse = arrayToUse.filter(person => person.gender === filterGender)
+  }
+  if (filterReligion) {
+    arrayToUse = arrayToUse.filter(person => person.religion === filterReligion)
   }
 
   useEffect(() => {

@@ -1,11 +1,15 @@
 'use client'
 
-import React, { useEffect, useState, useRef } from 'react'
-import { EventId, Region, Fields, Gender } from '@/lib/constants/enums'
+import React, { useRef } from 'react'
+import { EventId, Region, Fields, Gender, Religion } from '@/lib/constants/enums'
 import DataContext from '@/lib/context/DataContext'
 import AmountSpanCanvas from '@/lib/components/AmountSpanCanvas'
 import EventSpan from '@/lib/components/EventSpan'
 import EventYear from '@/lib/components/EventYear'
+// import GlobalStats from '@/lib/components/GlobalStats'
+import PeopleTotalsByReligion from '@/lib/components/subcomponents/PeopleTotalsByReligion'
+import DecideNameLater from '@/lib/components/subcomponents/DecideNameLater'
+import InterestDistributionPerReligion from '@/lib/components/subcomponents/InterestDistributionPerReligion'
 
 const Timelines = () => {
   const { setXCoord, setLocked, locked } = React.useContext(DataContext)
@@ -14,7 +18,7 @@ const Timelines = () => {
   return (
     <div
       ref={areaRef}
-      id='timelines-element'
+      id="timelines-element"
       className="col-span-9 bg-black text-white relative top-[28px] overflow-y-auto overflow-x-hidden"
       style={{ height: 'calc(100vh - 28px)' }}
       onClick={() => setLocked(!locked)}
@@ -50,7 +54,9 @@ const Timelines = () => {
       <EventSpan ui_id={EventId.SCIENTIFIC_REVOLUTION} color="#15803d" />
       <EventSpan ui_id={EventId.INDUSTRIAL_REVOLUTION} color="#0e7490" />
       <div className="bg-white/20 h-[18px]">
-        <p className="text-white text-[11px] pl-1 relative top-[1px]">NOTABLE INTELLECTUALS - EUROPE</p>
+        <p className="text-white text-[11px] pl-1 relative top-[1px]">
+          NOTABLE INTELLECTUALS - EUROPE
+        </p>
       </div>
       <AmountSpanCanvas ui_id="b1" title="All" filterRegion={Region.EUROPE} />
       <AmountSpanCanvas
@@ -61,6 +67,14 @@ const Timelines = () => {
         color="#3b82f6"
       />
       <AmountSpanCanvas
+        ui_id="b234"
+        title="Science only by Christians"
+        filterRegion={Region.EUROPE}
+        filterField={Fields.SCIENCE}
+        filterReligion={Religion.CHRISTIAN}
+        color="#3b82f6"
+      />
+      <AmountSpanCanvas
         ui_id="b5"
         title="Female only"
         filterGender={Gender.FEMALE}
@@ -68,14 +82,11 @@ const Timelines = () => {
         color="#f600ff"
       />
       <div className="bg-white/20 h-[18px]">
-        <p className="text-white text-[11px] pl-1 relative top-[1px]">NOTABLE INTELLECTUALS - MIDDLE EAST</p>
+        <p className="text-white text-[11px] pl-1 relative top-[1px]">
+          NOTABLE INTELLECTUALS - MIDDLE EAST
+        </p>
       </div>
-      <AmountSpanCanvas
-        ui_id="b3"
-        title="All"
-        filterRegion={Region.MIDDLE_EAST}
-        color="#ca8a03"
-      />
+      <AmountSpanCanvas ui_id="b3" title="All" filterRegion={Region.MIDDLE_EAST} color="#ca8a03" />
       <AmountSpanCanvas
         ui_id="b4"
         title="Science only"
@@ -90,6 +101,80 @@ const Timelines = () => {
         filterGender={Gender.FEMALE}
         color="#f600ff"
       />
+      <div className="bg-white/20 h-[18px]">
+        <p className="text-white text-[11px] pl-1 relative top-[1px]">
+          INTELLECTUALS ON SCIENCE - BY RELIGION
+        </p>
+      </div>
+      <AmountSpanCanvas
+        ui_id="b23d"
+        title="Polytheists"
+        filterField={Fields.SCIENCE}
+        filterReligion={Religion.POLYTHEIST}
+        color="#3b82f6"
+      />
+      <AmountSpanCanvas
+        ui_id="b23f"
+        title="Christians"
+        filterField={Fields.SCIENCE}
+        filterReligion={Religion.CHRISTIAN}
+        color="#3b82f6"
+      />
+      <AmountSpanCanvas
+        ui_id="b23g"
+        title="Jews"
+        filterField={Fields.SCIENCE}
+        filterReligion={Religion.JEWISH}
+        color="#3b82f6"
+      />
+      <AmountSpanCanvas
+        ui_id="b23h"
+        title="Muslims"
+        filterField={Fields.SCIENCE}
+        filterReligion={Religion.MUSLIM}
+        color="#3b82f6"
+      />
+      <AmountSpanCanvas
+        ui_id="b23j"
+        title="Atheists"
+        filterField={Fields.SCIENCE}
+        filterReligion={Religion.ATHEIST}
+        color="#3b82f6"
+      />
+      <div className="bg-white/20 h-[18px]">
+        <p className="text-white text-[11px] pl-1 relative top-[1px]">
+          TOTAL PEOPLE BY RELIGION
+        </p>
+      </div>
+      <PeopleTotalsByReligion />
+      <div className="bg-white/20 h-[18px]">
+        <p className="text-white text-[11px] pl-1 relative top-[1px]">
+          PERCENTAGE OF PEOPLE INTERESTED IN A SUBJECT WITHIN EACH RELIGION
+        </p>
+      </div>
+      {/* <GlobalStats /> */}
+      <div className="w-full pointer-events-none grid grid-cols-5 gap-4 p-4">
+        <InterestDistributionPerReligion religion={Religion.POLYTHEIST} />
+        <InterestDistributionPerReligion religion={Religion.CHRISTIAN} />
+        <InterestDistributionPerReligion religion={Religion.JEWISH} />
+        <InterestDistributionPerReligion religion={Religion.MUSLIM} />
+        <InterestDistributionPerReligion religion={Religion.ATHEIST} />
+      </div>
+      <div className="bg-white/20 h-[18px]">
+        <p className="text-white text-[11px] pl-1 relative top-[1px]">
+          PERCENTUAL REPRESENTATION OF EACH RELIGION BY INTEREST
+        </p>
+      </div>
+      <div className="w-full pointer-events-none grid grid-cols-8 gap-4 p-4">
+        <DecideNameLater interest={Fields.SCIENCE} />
+        <DecideNameLater interest={Fields.MIND} />
+        <DecideNameLater interest={Fields.HISTORY} />
+        <DecideNameLater interest={Fields.MUSIC} />
+        <DecideNameLater interest={Fields.POLITICS} />
+        <DecideNameLater interest={Fields.THEOLOGY} />
+        <DecideNameLater interest={Fields.SPIRITUALITY} />
+        <DecideNameLater interest={Fields.METAPHYSICS} />
+      </div>
       <div className="w-full flex justify-center h-[40] mt-20 mb-4 text-white/40">
         <p className="text-xs" style={{ zIndex: '9999999' }}>
           A project by{' '}
