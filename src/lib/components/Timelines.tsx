@@ -25,7 +25,7 @@ const Timelines = () => {
       onMouseMove={e => setXCoord(e.clientX)}
     >
       <div className="bg-white/20 h-[18px]">
-        <p className="text-white text-[11px] pl-1 relative top-[1px]">NOTABLE EVENTS</p>
+        <p className="text-white text-[11px] pl-2 relative top-[1px]">NOTABLE EVENTS</p>
       </div>
       <EventSpan ui_id={EventId.ROMAN_REPUBLIC} color="#dc2626" />
       <EventSpan ui_id={EventId.ROMAN_EMPIRE} color="#dc2626" />
@@ -54,21 +54,29 @@ const Timelines = () => {
       <EventSpan ui_id={EventId.SCIENTIFIC_REVOLUTION} color="#15803d" />
       <EventSpan ui_id={EventId.INDUSTRIAL_REVOLUTION} color="#0e7490" />
       <div className="bg-white/20 h-[18px]">
-        <p className="text-white text-[11px] pl-1 relative top-[1px]">
+        <p className="text-white text-[11px] pl-2 relative top-[1px]">
           NOTABLE INTELLECTUALS - EUROPE
         </p>
       </div>
       <AmountSpanCanvas ui_id="b1" title="All" filterRegion={Region.EUROPE} />
-      <AmountSpanCanvas
+      {/* <AmountSpanCanvas
         ui_id="b2"
-        title="Science only"
+        title="Science only (All)"
         filterRegion={Region.EUROPE}
         filterField={Fields.SCIENCE}
+        color="#3b82f6"
+      /> */}
+      <AmountSpanCanvas
+        ui_id="b23455"
+        title="Science only (Polytheists)"
+        filterRegion={Region.EUROPE}
+        filterField={Fields.SCIENCE}
+        filterReligion={Religion.POLYTHEIST}
         color="#3b82f6"
       />
       <AmountSpanCanvas
         ui_id="b234"
-        title="Science only by Christians"
+        title="Science only (Christians)"
         filterRegion={Region.EUROPE}
         filterField={Fields.SCIENCE}
         filterReligion={Religion.CHRISTIAN}
@@ -82,27 +90,27 @@ const Timelines = () => {
         color="#f600ff"
       />
       <div className="bg-white/20 h-[18px]">
-        <p className="text-white text-[11px] pl-1 relative top-[1px]">
-          NOTABLE INTELLECTUALS - MIDDLE EAST
+        <p className="text-white text-[11px] pl-2 relative top-[1px]">
+          NOTABLE INTELLECTUALS - MUSLIM
         </p>
       </div>
       <AmountSpanCanvas ui_id="b3" title="All" filterRegion={Region.MIDDLE_EAST} color="#ca8a03" />
       <AmountSpanCanvas
         ui_id="b4"
         title="Science only"
-        filterRegion={Region.MIDDLE_EAST}
+        filterReligion={Religion.MUSLIM}
         filterField={Fields.SCIENCE}
         color="#3b82f6"
       />
       <AmountSpanCanvas
         ui_id="b55"
         title="Female only"
-        filterRegion={Region.MIDDLE_EAST}
+        filterReligion={Religion.MUSLIM}
         filterGender={Gender.FEMALE}
         color="#f600ff"
       />
       <div className="bg-white/20 h-[18px]">
-        <p className="text-white text-[11px] pl-1 relative top-[1px]">
+        <p className="text-white text-[11px] pl-2 relative top-[1px]">
           INTELLECTUALS ON SCIENCE - BY RELIGION
         </p>
       </div>
@@ -142,26 +150,36 @@ const Timelines = () => {
         color="#3b82f6"
       />
       <div className="bg-white/20 h-[18px]">
-        <p className="text-white text-[11px] pl-1 relative top-[1px]">
-          TOTAL PEOPLE BY RELIGION
+        <p className="text-white text-[11px] pl-2 relative top-[1px]">
+          WOMEN IN SCIENCE
         </p>
+      </div>
+      <AmountSpanCanvas
+        ui_id="b4"
+        title="Women in Science - All regions and religions"
+        filterField={Fields.SCIENCE}
+        filterGender={Gender.FEMALE}
+        color="#f600ff"
+      />
+      <div className="bg-white/20 h-[18px]">
+        <p className="text-white text-[11px] pl-2 relative top-[1px]">TOTAL PEOPLE BY RELIGION</p>
       </div>
       <PeopleTotalsByReligion />
-      <div className="bg-white/20 h-[18px]">
-        <p className="text-white text-[11px] pl-1 relative top-[1px]">
+      {/* <div className="bg-white/20 h-[18px]">
+        <p className="text-white text-[11px] pl-2 relative top-[1px]">
           PERCENTAGE OF PEOPLE INTERESTED IN A SUBJECT WITHIN EACH RELIGION
         </p>
-      </div>
+      </div> */}
       {/* <GlobalStats /> */}
-      <div className="w-full pointer-events-none grid grid-cols-5 gap-4 p-4">
+      {/* <div className="w-full pointer-events-none grid grid-cols-5 gap-4 p-4">
         <InterestDistributionPerReligion religion={Religion.POLYTHEIST} />
         <InterestDistributionPerReligion religion={Religion.CHRISTIAN} />
         <InterestDistributionPerReligion religion={Religion.JEWISH} />
         <InterestDistributionPerReligion religion={Religion.MUSLIM} />
         <InterestDistributionPerReligion religion={Religion.ATHEIST} />
-      </div>
+      </div> */}
       <div className="bg-white/20 h-[18px]">
-        <p className="text-white text-[11px] pl-1 relative top-[1px]">
+        <p className="text-white text-[11px] pl-2 relative top-[1px]">
           PERCENTUAL REPRESENTATION OF EACH RELIGION BY INTEREST
         </p>
       </div>
