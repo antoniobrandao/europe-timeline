@@ -34,15 +34,20 @@ const Timelines = () => {
       <EventYear ui_id={EventId.ROME_CONQUERS_JUDEA} />
       <EventYear ui_id={EventId.SECOND_TEMPLE_DESTROYED} />
       <EventSpan ui_id={EventId.AMBROSE_OF_MILAN} color="#dc2626" />
+      <EventYear ui_id={EventId.PENALTY_OF_DEATH_FOR_PAGANS_ENACTED} />
+      <EventYear ui_id={EventId.LIBRARY_OF_ANTIOCH_DESTROYED} />
+      <EventYear ui_id={EventId.THE_TERM_PAGAN_IS_INTRODUCED} />
       <EventYear ui_id={EventId.CHRISTIANITY_BECOMES_MANDATORY} />
-      {/* <EventYear ui_id={EventId.CHRISTIANITY_MADE_OFFICAL_STATE_RELIGION} /> */}
       <EventYear ui_id={EventId.ALTAR_OF_VICTORY_REMOVED} />
+      <EventYear ui_id={EventId.SERAPEUM_DESTROYED} />
       <EventYear ui_id={EventId.CHRISTIANITY_BANS_OLYMPIC_GAMES} />
       <EventSpan ui_id={EventId.CHRISTIAN_DOMINATION_INSTITUTIONS} color="#7f1d1d" />
+      <EventYear ui_id={EventId.BOOK_BURNINGS} />
       <EventYear ui_id={EventId.JUSTINIAN_CLOSES_ACADEMY_OF_ATHENS} />
       <EventSpan ui_id={EventId.DARK_AGES} color="#7f1d1d" />
       <EventSpan ui_id={EventId.ISLAMIC_GOLDEN_AGE} color="#a16207" />
       <EventSpan ui_id={EventId.CAROLOGIAN_RENAISSANCE} color="#1d4ed8" />
+      <EventSpan ui_id={EventId.NORTHERN_CRUSADES} color="#dc2626" />
       <EventSpan ui_id={EventId.TWELVE_CENTURY_RENAISSANCE} color="#1d4ed8" />
       <EventSpan ui_id={EventId.CHRISTIAN_INQUISITION} color="#7f1d1d" />
       <EventSpan ui_id={EventId.WITCH_HUNTS} color="#7f1d1d" />

@@ -94,6 +94,20 @@ export const notableSpanEvents: EventSpanType[] = [
     ],
   },
   {
+    id: EventId.NORTHERN_CRUSADES,
+    name: 'Persecution of Pagans in Northern Europe',
+    start: 1100,
+    end: 1300,
+    link: 'https://en.wikipedia.org/wiki/Northern_Crusades',
+    description: [
+      `Christianity is a Eastern Religion - the Christianization of Western Europe happened much later than in the East.`,
+      `The Northern Crusades is the name given to the Christianization campaigns (via military force) undertaken by
+      Catholic Christian military orders and kingdoms against the northern European pagans.`,
+      `Not only Baltic, Finnic and West Slavic peoples around the southern and eastern shores of the Baltic Sea
+      were targeted, but also against Orthodox Christian East Slavs (for not being Catholic).`,
+    ],
+  },
+  {
     id: EventId.TWELVE_CENTURY_RENAISSANCE,
     name: '12th Century Renaissance',
     start: 1100,
@@ -248,6 +262,48 @@ export const notableYearEvents: EventYearType[] = [
       The pagans were driven out, the temple was sacked, and its contents were destroyed.`,
       `The Serapeum of Alexandria in the Ptolemaic Kingdom was an ancient Greek temple 
       built by Ptolemy III Euergetes (reigned 246–222 BC)`,
+    ],
+  },
+  {
+    id: EventId.PENALTY_OF_DEATH_FOR_PAGANS_ENACTED,
+    name: '353 Constantius prohibits pagan rituals under penalty of death',
+    year: 353,
+    link: 'https://en.wikipedia.org/wiki/Religious_policies_of_Constantius_II',
+    description: [
+      `Constantius prohibits pagan sacrifice under the penalty of death. He also shut down temples, forbade access to them, and ended their subsidies of public taxes.`,
+      `The prohibition was strengthened in 356 due to Pagan resistance - Constantius again declared that anyone found guilty of attending sacrifices or of worshipping idols would be executed.`,
+      `In 356 a new edict of Constantius orders the destruction of the Pagan Temples and the execution of all “idolaters”`,
+      `In 359 Christians organise the first death camps for the torture and executions of the arrested non-Christians from all around the empire.`,
+    ],
+  },
+  {
+    id: EventId.LIBRARY_OF_ANTIOCH_DESTROYED,
+    name: 'Library of Antioch Destroyed',
+    year: 364,
+    link: 'https://en.wikipedia.org/wiki/Religious_policies_of_Constantius_II',
+    description: [
+      `An Imperial edict (11th September) orders the death penalty for all Gentiles that worship their ancestral Gods or practice Divination (“sileat omnibus perpetuo divinandi uriositas”). Three different edicts (4th February, 9th September, 23rd December) order the confiscation of all properties of Pagan Temples and the death penalty for participation in Pagan rituals, even private ones.`,
+      `In 370, Emperor Valens orders a tremendous persecution of non-Christian peoples in all the Eastern Empire.`,
+      `In Antioch, among many other non-Christians, the ex-governor Fidustius and the priests Hilarius and Patricius are executed.`,
+      `Tons of books are burnt in the squares of the cities of the Eastern Empire.`,
+    ],
+  },
+  {
+    id: EventId.THE_TERM_PAGAN_IS_INTRODUCED,
+    name: 'Invention of the term Pagan',
+    year: 373,
+    link: 'https://churchandstate.org.uk/2016/06/christian-atrocities-three-centuries-of-pagan-persecution/',
+    description: [
+      `The term “Pagan” (pagani, villagers, equivalent to the modern insult, “peasants”) is introduced by the Christians to demean non-believers.`,
+    ],
+  },
+  {
+    id: EventId.BOOK_BURNINGS,
+    name: 'Theodosius II orders all non-Christian books to be burned.',
+    year: 448,
+    link: 'https://churchandstate.org.uk/2016/06/christian-atrocities-three-centuries-of-pagan-persecution/',
+    description: [
+      `Along with the book burnings, Theodosius II reaffirms the death penalty for all “heretics” and Pagans of the empire. Only Judaism is considered a legal non-Christian religion.`,
     ],
   },
   {
