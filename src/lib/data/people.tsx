@@ -3179,6 +3179,23 @@ export const westernPhilosophers: PhilosopherType[] = [
     wikipediaUrl: 'https://en.wikipedia.org/wiki/Peter_Lombard',
   },
   {
+    name: 'Bernard of Chartres',
+    gender: Gender.MALE,
+    birth: 1076,
+    death: 1134,
+    description: [
+      `French Neo-Platonist philosopher, scholar, and administrator. One of the first Christian scholars to look back at the wisdom of the pagan past, and a central figure of the 12th century Renaissance.`,
+      `Bernard composed a prose treatise De expositione Porphyrii, a metrical treatise on the same subject, a moral poem on education, and probably a fourth work in which he sought to reconcile Plato with Aristotle.`,
+      `The earliest attribution of the phrase "standing on the shoulders of giants" is to Bernard (by John of Salisbury):`,
+      `Bernard of Chartres used to say that we [the Moderns] are like dwarves perched on the shoulders of giants [the Ancients], and thus we are able to see more and farther than the latter. And this is not at all because of the acuteness of our sight or the stature of our body, but because we are carried aloft and elevated by the magnitude of the giants.`,
+    ],
+    religion: Religion.CHRISTIAN,
+    period: 'Middle Ages',
+    region: Region.EUROPE,
+    fields: [Fields.MIND, Fields.THEOLOGY],
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Bernard_of_Chartres',
+  },
+  {
     name: 'Ibn Tufail',
     gender: Gender.MALE,
     birth: 1105,

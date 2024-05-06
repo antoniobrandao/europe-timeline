@@ -494,7 +494,7 @@ export const notableYearEvents: EventYearType[] = [
     ],
   },
   {
-    id: EventId.CALIPH_AL_MUTAWAKKIL_DENOUNCES_RATIONALISM,
+    id: EventId.CALIPH_AL_MUTAWAKKIL_REJECTS_RATIONALISM,
     name: 'Caliph Al-Mutawakkil rejects rationalism and science',
     year: 850,
     link: 'https://www.thenewatlantis.com/publications/why-the-arabic-world-turned-away-from-science',
@@ -504,7 +504,7 @@ export const notableYearEvents: EventYearType[] = [
   },
   {
     id: EventId.CALIPH_AL_QADIR_REJECTS_RATIONALISM,
-    name: 'Caliph Al-Qadir rejects rationalism and science',
+    name: 'Caliph Al-Qadir prohibits rationalism and science',
     year: 1011,
     link: 'https://www.thenewatlantis.com/publications/why-the-arabic-world-turned-away-from-science',
     description: [

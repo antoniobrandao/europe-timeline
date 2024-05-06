@@ -4,6 +4,8 @@ import React, { useRef } from 'react'
 import { EventId, Region, Fields, Gender, Religion } from '@/lib/constants/enums'
 import DataContext from '@/lib/context/DataContext'
 import AmountSpanCanvas from '@/lib/components/AmountSpanCanvas'
+import ProjectBy from '@/lib/components/ProjectBy'
+import Conclusions from '@/lib/components/Conclusions'
 import EventSpan from '@/lib/components/EventSpan'
 import EventYear from '@/lib/components/EventYear'
 // import GlobalStats from '@/lib/components/GlobalStats'
@@ -48,6 +50,8 @@ const Timelines = () => {
       <EventSpan ui_id={EventId.DARK_AGES} color="#7f1d1d" />
       <EventSpan ui_id={EventId.ISLAMIC_GOLDEN_AGE} color="#a16207" />
       <EventSpan ui_id={EventId.CAROLOGIAN_RENAISSANCE} color="#1d4ed8" />
+      <EventYear ui_id={EventId.CALIPH_AL_MUTAWAKKIL_REJECTS_RATIONALISM} />
+      <EventYear ui_id={EventId.CALIPH_AL_QADIR_REJECTS_RATIONALISM} />
       <EventSpan ui_id={EventId.NORTHERN_CRUSADES} color="#dc2626" />
       <EventSpan ui_id={EventId.TWELVE_CENTURY_RENAISSANCE} color="#1d4ed8" />
       <EventSpan ui_id={EventId.CHRISTIAN_INQUISITION} color="#7f1d1d" />
@@ -156,9 +160,7 @@ const Timelines = () => {
         color="#3b82f6"
       />
       <div className="bg-white/20 h-[18px]">
-        <p className="text-white text-[11px] pl-2 relative top-[1px]">
-          WOMEN IN SCIENCE
-        </p>
+        <p className="text-white text-[11px] pl-2 relative top-[1px]">WOMEN IN SCIENCE</p>
       </div>
       <AmountSpanCanvas
         ui_id="b4"
@@ -199,18 +201,11 @@ const Timelines = () => {
         <DecideNameLater interest={Fields.SPIRITUALITY} />
         <DecideNameLater interest={Fields.METAPHYSICS} />
       </div>
-      <div className="w-full flex justify-center h-[40] mt-20 mb-4 text-white/40">
-        <p className="text-xs" style={{ zIndex: '9999999' }}>
-          A project by{' '}
-          <a
-            href="https://www.antoniobrandao.com"
-            target="_blank"
-            className="text-white/40 hover:text-white/70"
-          >
-            Antonio Brandao
-          </a>
-        </p>
+      <div className="bg-white/20 h-[18px]">
+        <p className="text-white text-[11px] pl-2 relative top-[1px]">CONCLUSIONS</p>
       </div>
+      <Conclusions />
+      <ProjectBy />
     </div>
   )
 }
