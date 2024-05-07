@@ -264,6 +264,18 @@ export const notableSpanEvents: EventSpanType[] = [
     ],
   },
   {
+    id: EventId.AGE_OF_ENLIGHTENMENT,
+    name: 'Age of Enlightenment',
+    start: 1714,
+    end: 1804,
+    link: 'https://en.wikipedia.org/wiki/Age_of_Enlightenment',
+    description: [
+      `The Enlightenment was the intellectual and philosophical movement that occurred in Europe in the 17th and the 18th centuries.`,
+      `The Enlightenment featured a range of social ideas centered on the value of knowledge learned by way of rationalism and of empiricism and political ideals such as natural law, liberty, and progress, toleration and fraternity, constitutional government and the formal separation of church and state.`,
+      `Before the Age of Enlightenment, the relationship between church and the absolutist government was very strong. The early enlightenment emerged in protest to these circumstances.`,
+    ],
+  },
+  {
     id: EventId.SCIENTIFIC_REVOLUTION,
     name: 'Scientific Revolution',
     start: 1543,

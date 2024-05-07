@@ -62,6 +62,7 @@ const Timelines = () => {
       <EventSpan ui_id={EventId.ITALIAN_RENAISSANCE} color="#1d4ed8" />
       <EventYear ui_id={EventId.PROTESTANT_REFORMATION} />
       <EventSpan ui_id={EventId.SCIENTIFIC_REVOLUTION} color="#15803d" />
+      <EventSpan ui_id={EventId.AGE_OF_ENLIGHTENMENT} color="#15803d" />
       <EventSpan ui_id={EventId.INDUSTRIAL_REVOLUTION} color="#0e7490" />
       <div className="bg-white/20 h-[18px]">
         <p className="text-white text-[11px] pl-2 relative top-[1px]">
