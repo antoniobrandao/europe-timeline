@@ -4282,7 +4282,7 @@ export const westernPhilosophers: PhilosopherType[] = [
   },
   {
     name: `Benedetto Varchi`,
-    gender: Gender.FEMALE,
+    gender: Gender.MALE,
     birth: 1502,
     death: 1565,
     description: [

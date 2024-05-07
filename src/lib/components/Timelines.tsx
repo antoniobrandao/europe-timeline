@@ -104,7 +104,7 @@ const Timelines = () => {
           NOTABLE INTELLECTUALS - MUSLIM
         </p>
       </div>
-      <AmountSpanCanvas ui_id="b3" title="All" filterRegion={Region.MIDDLE_EAST} color="#ca8a03" />
+      <AmountSpanCanvas ui_id="b3" title="All" filterReligion={Religion.MUSLIM} color="#ca8a03" />
       <AmountSpanCanvas
         ui_id="b4"
         title="Science only"
