@@ -24,7 +24,7 @@ const PeopleTotalsByReligion = () => {
   ).length
 
   return (
-    <div className='w-full grid grid-cols-5 p-4'>
+    <div className='w-full grid grid-cols-5 p-8'>
       <div>
         <p className="text-sm text-white uppercase">Polytheists:</p>
         <p className="text-sm text-white/50">{allPolytheistsNumber}</p>

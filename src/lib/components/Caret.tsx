@@ -7,12 +7,16 @@ import { postFix, yearDisplayFormatted } from '@/lib/ui_helpers'
 import clsx from 'clsx'
 
 const Caret = () => {
-  const { locked, xCoord, lockedX, year, displayContent } = React.useContext(DataContext)
+  const { locked, xCoord, lockedX, year, displayContent, caretHidden } = React.useContext(DataContext)
   const [lockedFirstTime, setLockedFirstTime] = useState(false)
   const [caretWidth, setCaretWidth] = useState<number>(1)
   const [unlockedFirstTime, setUnlockedFirstTime] = useState(false)
   const xToUse = locked ? lockedX : xCoord
 
+  if(caretHidden) {
+    return null
+  }
+  
   if (locked && !lockedFirstTime) {
     setLockedFirstTime(true)
   }

@@ -68,7 +68,7 @@ const AmountSpanCanvas = (props: AmountSpanCanvasProps) => {
     // @ts-ignore
     displayContent.ui_id === ui_id
 
-  const rootStyle = clsx('relative h-[80px]', selected ? 'bg-[#1a1a1a]' : 'bg-[#111]')
+  const rootStyle = clsx('relative h-[80px] border border-[#1a1a1a]', selected ? 'bg-[#1a1a1a]' : 'bg-[#111]')
 
   const handleHover = () => {
     if (!locked) {
@@ -91,7 +91,7 @@ const AmountSpanCanvas = (props: AmountSpanCanvasProps) => {
   
   return (
     <div className={rootStyle} onMouseMove={() => handleHover()}>
-      <p className="absolute bg-transparent top-1 left-1 text-white/40 text-xs">
+      <p className="absolute bg-transparent top-2 left-2 text-white/40 text-xs">
         {title} : {arrayToUse.length}
       </p>
       <canvas

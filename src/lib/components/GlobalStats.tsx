@@ -6,7 +6,6 @@ import { Religion, Fields } from '@/lib/constants/enums'
 import { PhilosopherType } from '@/lib/constants/types'
 import { postFix, yearDisplayFormatted } from '@/lib/ui_helpers'
 import clsx from 'clsx'
-import { get } from 'http'
 
 const GlobalStats = () => {
   const { westernPhilosophers } = React.useContext(DataContext)

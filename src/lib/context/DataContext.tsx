@@ -7,6 +7,8 @@ const defaultValue = {
   setLockedX: (newX: number) => {},
   locked: false,
   setLocked: (newState: boolean) => {},
+  caretHidden: false,
+  setCaretHidden: (newState: boolean) => {},
   xCoord: 0,
   setXCoord: (newState: number) => {},
   year: 0,

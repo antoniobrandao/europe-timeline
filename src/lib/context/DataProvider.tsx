@@ -10,6 +10,7 @@ import { PhilosopherType, DisplayContentType } from '@/lib/constants/types'
 const DataProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const [mainStatusDisplay, setMainStatusDisplay] = useState<string>('')
   const [locked, setLocked] = useState<boolean>(false)
+  const [caretHidden, setCaretHidden] = useState<boolean>(false)
   const [lockedX, setLockedX] = useState<number>(0)
   const [xCoord, setXCoord] = useState(0)
   const [displayContent, setDisplayContent] = useState<DisplayContentType | null | undefined>(null)
@@ -70,6 +71,8 @@ const DataProvider: FC<{ children: ReactNode }> = ({ children }) => {
         setXCoord: handleSetXCoord,
         locked: locked,
         setLocked: handleSetLocked,
+        caretHidden: caretHidden,
+        setCaretHidden: setCaretHidden,
         year: year,
         handleSetYear: handleSetYear,
         westernPhilosophers: westernPhilosophers,
