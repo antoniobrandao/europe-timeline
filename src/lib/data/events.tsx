@@ -254,6 +254,74 @@ export const notableSpanEvents: EventSpanType[] = [
     ],
   },
   {
+    id: EventId.EUROPEAN_WARS_OF_RELIGION,
+    name: 'European Wars of Religion',
+    start: 1522,
+    end: 1712,
+    link: 'https://en.wikipedia.org/wiki/European_wars_of_religion',
+    description: [
+      `Totaling about 50 separate conflicts, the European wars of religion were a series of wars waged in Europe during the 16th, 17th and early 18th centuries.`,
+      `Fought after the Protestant Reformation began in 1517, the wars disrupted the religious and political order in the Catholic countries of Europe, or Christendom.`,
+      `Warfare intensified after the Catholic Church began the Counter-Reformation against the growth of Protestantism in 1545.`,
+      `The conflicts culminated in the Thirty Years' War, which devastated Germany and killed one third of its population, a mortality rate twice that of World War I.`,
+      `The Peace of Westphalia broadly resolved the conflicts by recognising three separate Christian traditions in the Holy Roman Empire: Roman Catholicism, Lutheranism, and Calvinism.`,
+    ],
+  },
+  {
+    id: EventId.FRANKISH_GENOCIDE_OF_PAGANS,
+    name: 'Frankish genocide of pagans',
+    start: 772,
+    end: 804,
+    link: 'https://en.wikipedia.org/wiki/Saxon_Wars',
+    description: [
+      `A religious war against pagan "devil-worshippers" according to Einhard, Charlemagne's biographer.`,
+      `Charlemagne ordered the destruction of the Irminsul, an giant tree sacred to the Saxons. Notably, he killed 40.000 Saxons in a single day for refusing to convert to Christianity.`,
+      `Per Ullidtz stated that previous Frankish-Saxon 'had been mostly a border war', 'but under Charles it changed character': because of 'Charles' idea of unity, of a king over all German tribes, and of universal Christianity in all of his kingdom, it changed into a "mission from heaven".'`,
+      `Similarly, a successful Carolingian campaign against the Pannonian Avars in the 790s led to their forced conversion to Christianity.`,
+      `The earlier Merovingian conquests of Thuringia, Allemannia and Bavaria had also resulted in their forced Christianisation by 555,
+      although the Frisians resisted with similar determinacy as the Saxons during the Frisian-rankish wars (7th and 8th century).`,
+    ],
+  },
+  {
+    id: EventId.BLACK_DEATH,
+    name: 'BLACK DEATH',
+    start: 1346,
+    end: 1353,
+    link: 'https://en.wikipedia.org/wiki/Black_Death',
+    description: [
+      `The Black Death was a bubonic plague pandemic occurring in Europe from 1346 to 1353.
+      One of the most fatal pandemics in human history, as many as 50 million people perished,
+      perhaps 50% of Europe's 14th century population.`,
+      `The plague created religious, social and economic upheavals, with
+      profound effects on the course of European history.`,
+    ],
+  },
+  {
+    id: EventId.THE_CRUSADES,
+    name: 'The Crusades',
+    start: 1095,
+    end: 1291,
+    link: 'https://en.wikipedia.org/wiki/Crusades',
+    description: [
+      `The Crusades were a series of military incursions into the Middle East by European Christians, starting in 1095.`,
+      `Started by the request for aid by Eastern Roman Emperor Alexios I Komnenos, the Crusades were initially launched to recapture Jerusalem and the Holy Land from Muslim rule.`,
+      `After some initial success, the Crusades took a turn for the worse, with the Fourth Crusade (1202-1204) sacking Constantinople, and the Children's Crusade (1212) ending in disaster.`,
+      `Eventually the Crusades were abandoned, with the last Crusader state falling in 1291.`,
+    ],
+  },
+  {
+    id: EventId.GENOCIDE_OF_THE_CATHARS,
+    name: 'Genocide of the Cathars',
+    start: 1209,
+    end: 1350,
+    link: 'https://en.wikipedia.org/wiki/Catharism',
+    description: [
+      `Denounced as a heretical Christian sect by the Catholic Church, its followers were attacked first by the Albigensian
+      Crusade and later by the Medieval Inquisition, which eradicated the sect by 1350.`,
+      `Many thousands were slaughtered, hanged, or burnt at the stake, sometimes without regard for "age or sex.`,
+    ],
+  },
+  {
     id: EventId.INDUSTRIAL_REVOLUTION,
     name: 'Industrial Revolution',
     start: 1760,

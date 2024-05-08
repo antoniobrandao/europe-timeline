@@ -47,7 +47,7 @@ const Caret = () => {
     }
   }
 
-  const caretStyle = clsx('absolute h-screen top-0 z-50')
+  const caretStyle = clsx('absolute h-screen top-0 z-50 pointer-events-none')
   let caretColor = locked ? '#ffffff' : 'rgba(255,255,255,0.3)'
   let textColor = '#ffffff'
   const textStyleYear = 'text-sm'
@@ -75,7 +75,7 @@ const Caret = () => {
     caretColor = displayContent.color
     // @ts-ignore
     textColor = displayContent.color
-    textLeft = yearDisplayFormatted(year)
+    textLeft = yearDisplayFormatted(start)
     textRight = yearDisplayFormatted(end)
   }
   // @ts-ignore

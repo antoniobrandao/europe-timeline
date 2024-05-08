@@ -59,18 +59,23 @@ const Timelines = () => {
         <EventYear ui_id={EventId.JUSTINIAN_CLOSES_ACADEMY_OF_ATHENS} />
         <EventSpan ui_id={EventId.DARK_AGES} color="#7f1d1d" />
         <EventSpan ui_id={EventId.ISLAMIC_GOLDEN_AGE} color="#a16207" />
+        <EventSpan ui_id={EventId.FRANKISH_GENOCIDE_OF_PAGANS} color="#7f1d1d" />
         <EventSpan ui_id={EventId.CAROLOGIAN_RENAISSANCE} color="#1d4ed8" />
         <EventYear ui_id={EventId.CALIPH_AL_MUTAWAKKIL_REJECTS_RATIONALISM} />
         <EventYear ui_id={EventId.CALIPH_AL_QADIR_REJECTS_RATIONALISM} />
+        <EventSpan ui_id={EventId.THE_CRUSADES} color="#7f1d1d" />
         <EventSpan ui_id={EventId.NORTHERN_CRUSADES} color="#dc2626" />
         <EventSpan ui_id={EventId.TWELVE_CENTURY_RENAISSANCE} color="#1d4ed8" />
         <EventSpan ui_id={EventId.CHRISTIAN_INQUISITION} color="#7f1d1d" />
+        <EventSpan ui_id={EventId.GENOCIDE_OF_THE_CATHARS} color="#7f1d1d" />
+        <EventSpan ui_id={EventId.BLACK_DEATH} color="#7f1d1d" />
         <EventSpan ui_id={EventId.WITCH_HUNTS} color="#7f1d1d" />
         <EventYear ui_id={EventId.PLETHON_VISITS_FLORENCE} />
         <EventYear ui_id={EventId.FALL_OF_CONSTANTINOPLE} />
         <EventYear ui_id={EventId.MEDICI_REOPENS_PLATONIC_ACADEMY} />
         <EventSpan ui_id={EventId.ITALIAN_RENAISSANCE} color="#1d4ed8" />
         <EventYear ui_id={EventId.PROTESTANT_REFORMATION} />
+        <EventSpan ui_id={EventId.EUROPEAN_WARS_OF_RELIGION} color="#dc2626" />
         <EventSpan ui_id={EventId.SCIENTIFIC_REVOLUTION} color="#15803d" />
         <EventSpan ui_id={EventId.AGE_OF_ENLIGHTENMENT} color="#15803d" />
         <EventSpan ui_id={EventId.INDUSTRIAL_REVOLUTION} color="#0e7490" />

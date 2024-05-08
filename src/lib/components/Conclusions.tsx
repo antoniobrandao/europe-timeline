@@ -179,7 +179,7 @@ const Conclusions = () => {
           {`This is a visualisation of the impact of Christianity on European civilisation.`}
         </p>
         <p className={textWithMarginBottom}>
-          {`Notable artists, poets and musicians are not included - it would be unfair since because ancient artists (eg. sculptors) were not made famous or added to history books.`}
+          {`Notable artists, poets and musicians are not included - because ancient artists (eg. sculptors) were not made famous or added to history books to allow for a fair comparison.`}
         </p>
         <p className={textWithMarginBottom}>
           {`There are still people left to add (it takes time) - I have noticed however, that the patterns don't change regardless of how many people I add. It just grows in V shape.`}
