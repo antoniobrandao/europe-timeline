@@ -57,7 +57,7 @@ const AmountSpanCanvas = (props: AmountSpanCanvasProps) => {
         setDrawingComplete(true)
       }
     }
-  })
+  }, [arrayToUse, color])
 
   //
   // @ts-ignore
