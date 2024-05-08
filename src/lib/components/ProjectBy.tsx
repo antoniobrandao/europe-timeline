@@ -3,6 +3,7 @@ import React from 'react'
 const ProjectBy = () => {
   return (
     <div className="w-full flex flex-col items-center justify-center h-[40] mt-20 mb-4 text-white/40">
+      
       <p className="text-xs" style={{ zIndex: '9999999' }}>
         A project by{' '}
         <a
@@ -30,6 +31,18 @@ const ProjectBy = () => {
         </a>{' '}
         if you would like to comment or suggest additions
       </p>
+      
+      <p className="text-xs mt-2" style={{ zIndex: '9999999' }}>
+        This project is open-source - {' '}
+        <a
+          href="https://twitter.com/KingsandClicks"
+          target="_blank"
+          className="text-white/40 hover:text-white/70"
+        >
+          (Github)
+        </a>
+      </p>
+      
       <p className="text-xs mt-2" style={{ zIndex: '9999999' }}>
         Special thanks to{' '}
         <a
@@ -41,6 +54,7 @@ const ProjectBy = () => {
         </a>{' '}
         for inspiring me to do this.{' '}
       </p>
+
     </div>
   )
 }
