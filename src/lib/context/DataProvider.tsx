@@ -34,7 +34,7 @@ const DataProvider: FC<{ children: ReactNode }> = ({ children }) => {
     }
   }
 
-  const handleSetDisplayContent = (data: DisplayContentType) => {
+  const handleSetDisplayContent = (data: DisplayContentType | null | undefined) => {
     if (locked) return
     setDisplayContent(data)
   }
