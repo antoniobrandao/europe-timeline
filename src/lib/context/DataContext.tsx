@@ -21,7 +21,7 @@ const defaultValue = {
   // philosophersToDisplay: [],
   // setPhilosophersToDisplay: (jsx: any) => {},
   displayContent: null,
-  setDisplayContent: (newDisplayContent: DisplayContentType) => {},
+  setDisplayContent: (newDisplayContent: DisplayContentType | null) => {},
 }
 
 const DataContext = createContext(defaultValue)
