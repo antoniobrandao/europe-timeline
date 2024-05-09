@@ -11,7 +11,7 @@ import EventYear from '@/lib/components/EventYear'
 import Stats from '@/lib/components/Stats'
 
 const Timelines = () => {
-  const { setXCoord, setLocked, locked, caretHidden, setCaretHidden } =
+  const { setXCoord, setLocked, locked, caretHidden, setCaretHidden, setDisplayContent } =
     React.useContext(DataContext)
   const areaRef = useRef<HTMLDivElement | null>(null)
 
@@ -28,12 +28,16 @@ const Timelines = () => {
   }
 
   return (
-    <div className="col-span-9 bg-black relative top-[28px] overflow-y-auto overflow-x-hidden" style={{ height: 'calc(100vh - 28px)' }}>
+    <div
+      className="col-span-9 bg-black relative top-[28px] overflow-y-auto overflow-x-hidden"
+      style={{ height: 'calc(100vh - 28px)' }}
+    >
       <div
         ref={areaRef}
         id="timelines-element"
         className="w-full text-white"
         onClick={() => setLocked(!locked)}
+        onMouseOver={handleInMove}
         onMouseMove={handleInMove}
       >
         <div className="bg-white/20 h-[18px]">
@@ -91,7 +95,13 @@ const Timelines = () => {
             NOTABLE INTELLECTUALS IN SCIENCE - EUROPE VS. ISLAMIC WORLD
           </p>
         </div>
-        <AmountSpanCanvas ui_id="b11" title="EUROPE" filterField={Fields.SCIENCE} filterRegion={Region.EUROPE} color="#3b82f6" />
+        <AmountSpanCanvas
+          ui_id="b11"
+          title="EUROPE"
+          filterField={Fields.SCIENCE}
+          filterRegion={Region.EUROPE}
+          color="#3b82f6"
+        />
         <AmountSpanCanvas
           ui_id="b3"
           title="ISLAMIC WORLD"
@@ -171,7 +181,7 @@ const Timelines = () => {
           color="#f600ff"
         />
       </div>
-      <div onMouseMove={handleOutMove}>
+      <div onMouseMove={handleOutMove} onMouseOver={handleOutMove}>
         <Stats />
         <div className="bg-white/20 h-[18px]">
           <p className="text-white text-[11px] pl-2 relative top-[1px]">CONCLUSIONS</p>

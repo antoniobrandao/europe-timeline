@@ -10,8 +10,8 @@ import { yearDisplayFormatted } from '@/lib/ui_helpers'
 import clsx from 'clsx'
 
 const Sidebar = () => {
-  const { year, displayContent, westernPhilosophers } = React.useContext(DataContext)
-  let philosophersToDisplay
+  const { displayContent, caretHidden } = React.useContext(DataContext)
+  // let philosophersToDisplay
   let eventYearToDisplay
   let eventSpanToDisplay
   let descriptionToDisplay
@@ -26,7 +26,7 @@ const Sidebar = () => {
   const type = dc.type
   if (!data) return null
   // @ts-ignore
-  const description = data.description
+  // const description = data.description
   // @ts-ignore
   const link = data.link
 
@@ -128,14 +128,16 @@ const Sidebar = () => {
       style={{ height: 'calc(100vh - 28px)' }}
       className="w-full relative top-[28px] border-l border-white/10 m-0 bg-[#171717] col-span-3 p-4 flex flex-col gap-4 overflow-auto"
     >
-      <div className="flex flex-col gap-2">
-        {filtersJSX}
-        {eventYearJSX}
-        {eventSpanJSX}
-        {data.people && <PeopleDisplay philosophersToDisplay={data.people} />}
-        {descriptionToDisplay}
-        {linkToDisplay}
-      </div>
+      {caretHidden ? null : (
+        <div className="flex flex-col gap-2">
+          {filtersJSX}
+          {eventYearJSX}
+          {eventSpanJSX}
+          {data.people && <PeopleDisplay philosophersToDisplay={data.people} />}
+          {descriptionToDisplay}
+          {linkToDisplay}
+        </div>
+      )}
     </div>
   )
 }
