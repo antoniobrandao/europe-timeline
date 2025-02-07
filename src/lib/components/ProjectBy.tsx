@@ -35,7 +35,7 @@ const ProjectBy = () => {
       <p className="text-xs mt-2" style={{ zIndex: '9999999' }}>
         This project is open-source - {' '}
         <a
-          href="https://twitter.com/KingsandClicks"
+          href="https://github.com/antoniobrandao/europe-timeline"
           target="_blank"
           className="text-white/40 hover:text-white/70"
         >
