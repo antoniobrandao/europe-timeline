@@ -49,7 +49,7 @@ const Timelines = () => {
         <EventYear ui_id={EventId.CHRISTIANITY_APPEARS} />
         <EventYear ui_id={EventId.ROME_CONQUERS_JUDEA} />
         <EventYear ui_id={EventId.SECOND_TEMPLE_DESTROYED} />
-        <EventSpan ui_id={EventId.PERSECUTION_OF_POLYTHEISTS} color="#7f1d1d" />
+        {/* <EventSpan ui_id={EventId.PERSECUTION_OF_POLYTHEISTS} color="#7f1d1d" /> */}
         <EventSpan ui_id={EventId.AMBROSE_OF_MILAN} color="#dc2626" />
         <EventYear ui_id={EventId.PENALTY_OF_DEATH_FOR_PAGANS_ENACTED} />
         <EventYear ui_id={EventId.LIBRARY_OF_ANTIOCH_DESTROYED} />
